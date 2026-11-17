@@ -383,11 +383,9 @@
 
     <!-- CABEÇALHO E BANNER FIXO EM TODAS AS ABAS -->
     <header id="main-banner" class="w-full relative overflow-hidden border-b border-slate-200/80 shadow-sm no-print" style="background: linear-gradient(125deg, #ffffff 0%, #f1f7fa 45%, #e3eff5 100%);">
-        <!-- Elementos decorativos modernos de fundo (Formas geométricas sutis) -->
         <div class="absolute inset-0 pointer-events-none overflow-hidden">
             <div id="banner-blob-1" class="absolute -top-24 -right-20 w-96 h-96 rounded-full opacity-20 blur-3xl transition-colors duration-500" style="background-color: #0d4a5e;"></div>
             <div id="banner-blob-2" class="absolute -bottom-24 left-1/3 w-80 h-80 rounded-full opacity-25 blur-3xl transition-colors duration-500" style="background-color: #f59e0b;"></div>
-            <!-- Padrão sutil de linhas diagonais modernas -->
             <svg class="absolute right-0 top-0 h-full w-1/2 opacity-[0.04]" viewBox="0 0 400 200" fill="none">
                 <path d="M0 200L200 0H260L60 200H0Z" fill="#0d4a5e"/>
                 <path d="M120 200L320 0H380L180 200H120Z" fill="#0d4a5e"/>
@@ -398,40 +396,32 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 relative z-10">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-8">
                 
-                <!-- ESQUERDA: LOGO VETORIAL REDESENHADA EM ALTA DEFINIÇÃO -->
+                <!-- ESQUERDA: LOGO VETORIAL -->
                 <div class="flex-shrink-0 flex items-center justify-center lg:justify-start">
                     <div class="relative group cursor-pointer" onclick="switchTab('vitrine')" title="Voltar para Vitrine">
-                        <!-- Brilho dourado suave atrás da logo -->
                         <div class="absolute inset-2 bg-amber-400/20 rounded-full blur-xl group-hover:bg-amber-400/30 transition"></div>
-                        
-                        <!-- SVG FIEL À LOGO ORIGINAL COM TEXTO ATUALIZADO PARA DISTRIBUIDORA -->
                         <svg class="w-48 sm:w-56 md:w-60 h-auto drop-shadow-md relative z-10 transform group-hover:scale-[1.02] transition-transform duration-300" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <!-- Padrão Quadriculado em Losangos do Fundo Azul Petróleo -->
                                 <pattern id="diamondPattern" width="24" height="24" patternUnits="userSpaceOnUse">
                                     <rect width="24" height="24" fill="#073442"/>
                                     <polygon points="12,0 24,12 12,24 0,12" fill="#0b4659"/>
                                 </pattern>
-                                <!-- Gradiente da Cerveja -->
                                 <linearGradient id="beerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                                     <stop offset="0%" stop-color="#f59e0b"/>
                                     <stop offset="45%" stop-color="#fbbf24"/>
                                     <stop offset="100%" stop-color="#d97706"/>
                                 </linearGradient>
-                                <!-- Gradiente Dourado das Espigas e Estrelas -->
                                 <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                                     <stop offset="0%" stop-color="#fde047"/>
                                     <stop offset="50%" stop-color="#f59e0b"/>
                                     <stop offset="100%" stop-color="#b45309"/>
                                 </linearGradient>
-                                <!-- Gradiente Borda Vermelha -->
                                 <linearGradient id="redBorderGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                                     <stop offset="0%" stop-color="#dc2626"/>
                                     <stop offset="100%" stop-color="#991b1b"/>
                                 </linearGradient>
                             </defs>
 
-                            <!-- ESPIGAS DE CEVADA DOURADAS (ESQUERDA) -->
                             <g fill="url(#goldGrad)" stroke="#78350f" stroke-width="1">
                                 <path d="M72 155 C60 135, 62 110, 78 88 C84 95, 82 115, 76 155 Z"/>
                                 <polygon points="62,148 52,135 64,130 71,144"/>
@@ -441,7 +431,6 @@
                                 <polygon points="75,78 79,64 90,70 85,82"/>
                             </g>
 
-                            <!-- ESPIGAS DE CEVADA DOURADAS (DIREITA) -->
                             <g fill="url(#goldGrad)" stroke="#78350f" stroke-width="1">
                                 <path d="M328 155 C340 135, 338 110, 322 88 C316 95, 318 115, 324 155 Z"/>
                                 <polygon points="338,148 348,135 336,130 329,144"/>
@@ -451,35 +440,13 @@
                                 <polygon points="325,78 321,64 310,70 315,82"/>
                             </g>
 
-                            <!-- BRASÃO PRINCIPAL (CONTORNO EXTERNO VERMELHO) -->
-                            <path d="M125 115 
-                                     C125 80, 275 80, 275 115 
-                                     C275 140, 305 150, 338 145 
-                                     L355 152 L342 185 L355 218 L338 225 
-                                     C305 220, 275 230, 275 252 
-                                     C275 278, 125 278, 125 252 
-                                     C125 230, 95 220, 62 225 
-                                     L45 218 L58 185 L45 152 L62 145 
-                                     C95 150, 125 140, 125 115 Z" 
-                                  fill="url(#redBorderGrad)" stroke="#7f1d1d" stroke-width="2.5"/>
+                            <path d="M125 115 C125 80, 275 80, 275 115 C275 140, 305 150, 338 145 L355 152 L342 185 L355 218 L338 225 C305 220, 275 230, 275 252 C275 278, 125 278, 125 252 C125 230, 95 220, 62 225 L45 218 L58 185 L45 152 L62 145 C95 150, 125 140, 125 115 Z" fill="url(#redBorderGrad)" stroke="#7f1d1d" stroke-width="2.5"/>
 
-                            <!-- BRASÃO INTERNO (PREENCHIMENTO QUADRICULADO AZUL PETRÓLEO) -->
-                            <path d="M133 120 
-                                     C133 90, 267 90, 267 120 
-                                     C267 146, 298 158, 332 153 
-                                     L343 158 L332 185 L343 212 L332 217 
-                                     C298 212, 267 224, 267 247 
-                                     C267 269, 133 269, 133 247 
-                                     C133 224, 102 212, 68 217 
-                                     L57 212 L68 185 L57 158 L68 153 
-                                     C102 158, 133 146, 133 120 Z" 
-                                  fill="url(#diamondPattern)" stroke="#fca5a5" stroke-width="1.5"/>
+                            <path d="M133 120 C133 90, 267 90, 267 120 C267 146, 298 158, 332 153 L343 158 L332 185 L343 212 L332 217 C298 212, 267 224, 267 247 C267 269, 133 269, 133 247 C133 224, 102 212, 68 217 L57 212 L68 185 L57 158 L68 153 C102 158, 133 146, 133 120 Z" fill="url(#diamondPattern)" stroke="#fca5a5" stroke-width="1.5"/>
 
-                            <!-- LOSANGOS DOURADOS NAS PONTAS LATERAIS -->
                             <polygon points="82,177 90,185 82,193 74,185" fill="url(#goldGrad)"/>
                             <polygon points="318,177 326,185 318,193 310,185" fill="url(#goldGrad)"/>
 
-                            <!-- RAIOS DE FRESCOR ACIMA DA CANECA -->
                             <g stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round">
                                 <line x1="200" y1="12" x2="200" y2="24"/>
                                 <line x1="172" y1="18" x2="177" y2="29"/>
@@ -490,68 +457,39 @@
                                 <line x1="265" y1="54" x2="254" y2="58"/>
                             </g>
 
-                            <!-- CANECA DE CHOPP CENTRAL -->
                             <g transform="translate(152, 32)">
-                                <!-- Alça da Caneca -->
-                                <path d="M78 48 H94 C101 48, 105 53, 105 60 V88 C105 95, 101 100, 94 100 H78" 
-                                      fill="none" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
-                                <path d="M78 48 H94 C101 48, 105 53, 105 60 V88 C105 95, 101 100, 94 100 H78" 
-                                      fill="none" stroke="#f8fafc" stroke-width="3" stroke-linecap="round"/>
-
-                                <!-- Corpo de Vidro e Cerveja -->
+                                <path d="M78 48 H94 C101 48, 105 53, 105 60 V88 C105 95, 101 100, 94 100 H78" fill="none" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
+                                <path d="M78 48 H94 C101 48, 105 53, 105 60 V88 C105 95, 101 100, 94 100 H78" fill="none" stroke="#f8fafc" stroke-width="3" stroke-linecap="round"/>
                                 <rect x="14" y="36" width="66" height="76" rx="6" fill="url(#beerGrad)" stroke="#e2e8f0" stroke-width="3"/>
-                                <!-- Base de Vidro da Caneca -->
                                 <rect x="10" y="108" width="74" height="8" rx="3" fill="#cbd5e1"/>
-                                <!-- Frisos verticais do vidro -->
                                 <rect x="24" y="48" width="7" height="52" rx="3.5" fill="#fef08a" opacity="0.45"/>
                                 <rect x="43" y="48" width="8" height="52" rx="4" fill="#fef08a" opacity="0.45"/>
                                 <rect x="63" y="48" width="7" height="52" rx="3.5" fill="#fef08a" opacity="0.45"/>
-
-                                <!-- Espuma Cremosa Transbordando -->
-                                <path d="M12 42 
-                                         C4 42, 2 30, 10 24 
-                                         C10 13, 24 8, 33 13 
-                                         C40 4, 58 4, 65 14 
-                                         C76 11, 86 19, 83 30 
-                                         C90 35, 86 44, 78 44 
-                                         L28 44 
-                                         C28 55, 22 58, 20 50 
-                                         C18 62, 11 62, 11 50 Z" 
-                                      fill="#fffbeb" stroke="#fef3c7" stroke-width="1.5"/>
-                                <!-- Bolhas de espuma soltas -->
+                                <path d="M12 42 C4 42, 2 30, 10 24 C10 13, 24 8, 33 13 C40 4, 58 4, 65 14 C76 11, 86 19, 83 30 C90 35, 86 44, 78 44 L28 44 C28 55, 22 58, 20 50 C18 62, 11 62, 11 50 Z" fill="#fffbeb" stroke="#fef3c7" stroke-width="1.5"/>
                                 <circle cx="22" cy="7" r="3" fill="#fffbeb"/>
                                 <circle cx="72" cy="8" r="3.5" fill="#fffbeb"/>
                                 <circle cx="84" cy="16" r="2.2" fill="#fffbeb"/>
                             </g>
 
-                            <!-- TEXTO ATUALIZADO DENTRO DO BRASÃO -->
                             <g font-family="'Montserrat', sans-serif" font-weight="900" text-anchor="middle" fill="#ffffff">
                                 <text x="200" y="175" font-size="16.5" letter-spacing="0.8">DISTRIBUIDORA DE</text>
                                 <text x="200" y="199" font-size="18.5" letter-spacing="1" fill="#fde047">BEBIDAS DO</text>
                                 <text x="200" y="224" font-size="20.5" letter-spacing="1.2">ELINILSON</text>
                             </g>
 
-                            <!-- 5 ESTRELAS DOURADAS NA BASE -->
                             <g fill="url(#goldGrad)" stroke="#78350f" stroke-width="0.8">
-                                <!-- Estrela 1 (Esquerda) -->
                                 <polygon points="116,265 119,272 126,272 120,276 122,283 116,279 110,283 112,276 106,272 113,272"/>
-                                <!-- Estrela 2 -->
                                 <polygon points="156,281 159,288 166,288 160,292 162,299 156,295 150,299 152,292 146,288 153,288"/>
-                                <!-- Estrela 3 (Centro) -->
                                 <polygon points="200,287 203,294 210,294 204,298 206,305 200,301 194,305 196,298 190,294 197,294"/>
-                                <!-- Estrela 4 -->
                                 <polygon points="244,281 247,288 254,288 248,292 250,299 244,295 238,299 240,292 234,288 241,288"/>
-                                <!-- Estrela 5 (Direita) -->
                                 <polygon points="284,265 287,272 294,272 288,276 290,283 284,279 278,283 280,276 274,272 281,272"/>
                             </g>
                         </svg>
                     </div>
                 </div>
 
-                <!-- CENTRO PARA DIREITA: BANNER MODERNO ILUSTRATIVO (CAMINHÃO, ENTREGADOR, CAIXAS E CHAMADA) -->
+                <!-- DIREITA: BANNER -->
                 <div class="flex-1 w-full flex flex-col md:flex-row items-center justify-between gap-4 bg-white/75 backdrop-blur-md border border-white/90 rounded-2xl p-4 sm:px-6 sm:py-4 shadow-sm">
-                    
-                    <!-- Texto de Destaque Moderno -->
                     <div class="text-center md:text-left max-w-md">
                         <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-800 mb-2">
                             <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
@@ -565,112 +503,61 @@
                         </p>
                     </div>
 
-                    <!-- ILUSTRAÇÃO VETORIAL MODERNA: CAMINHÃO DE ENTREGAS, ENTREGADOR COM VOLUME E CAIXAS -->
                     <div class="w-full md:w-auto flex flex-col items-center md:items-end justify-end flex-shrink-0">
                         <svg class="w-full max-w-[340px] sm:max-w-[380px] h-auto drop-shadow-sm" viewBox="0 0 460 175" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Sombra do chão / pista moderna -->
                             <ellipse cx="235" cy="162" rx="215" ry="7" fill="#cbd5e1" opacity="0.65"/>
                             <line x1="25" y1="162" x2="440" y2="162" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-dasharray="12 8"/>
-
-                            <!-- LINHAS DE VELOCIDADE MODERNAS ATRÁS DO CAMINHÃO -->
                             <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round" opacity="0.8">
                                 <line x1="12" y1="52" x2="48" y2="52"/>
                                 <line x1="4" y1="72" x2="36" y2="72"/>
                                 <line x1="18" y1="92" x2="45" y2="92"/>
                             </g>
-
-                            <!-- CAMINHÃO DE BEBIDAS MODERNO (CORES DA MARCA: AZUL PETRÓLEO, VERMELHO E DOURADO) -->
                             <g transform="translate(42, 24)">
-                                <!-- Baú do Caminhão -->
                                 <rect x="10" y="12" width="142" height="92" rx="10" fill="#073442"/>
-                                <!-- Faixa vermelha moderna no baú -->
                                 <path d="M10 74 H152 V94 C152 99.5 147.5 104 142 104 H20 C14.5 104 10 99.5 10 94 V74 Z" fill="#dc2626"/>
-                                <!-- Detalhe dourado no baú -->
                                 <rect x="10" y="68" width="142" height="6" fill="#f59e0b"/>
-                                
-                                <!-- Ícone de Caneca/Garrafa estilizado no baú -->
                                 <circle cx="81" cy="41" r="20" fill="#0b4659" stroke="#fbbf24" stroke-width="2"/>
                                 <rect x="74" y="32" width="14" height="18" rx="2" fill="#fbbf24"/>
                                 <path d="M72 32 C72 27, 90 27, 90 32 Z" fill="#fffbeb"/>
-
-                                <!-- Cabine Moderna do Caminhão -->
                                 <path d="M156 36 H192 C202 36, 210 43, 213 53 L221 76 C223 81, 224 86, 224 91 V96 C224 100.4 220.4 104 216 104 H156 V36 Z" fill="#0b4659"/>
-                                <!-- Para-brisa e Janela Lateral -->
                                 <path d="M164 44 H190 C196 44, 201 48, 203 54 L209 70 H164 V44 Z" fill="#bae6fd"/>
-                                <!-- Reflexo no vidro -->
                                 <polygon points="170,44 182,44 172,70 164,70" fill="#ffffff" opacity="0.45"/>
-                                <!-- Farol dianteiro -->
                                 <rect x="216" y="82" width="8" height="10" rx="3" fill="#fde047"/>
-                                <!-- Para-choque -->
                                 <rect x="152" y="100" width="76" height="8" rx="4" fill="#334155"/>
-
-                                <!-- Rodas com Calotas Douradas -->
-                                <g>
-                                    <circle cx="52" cy="112" r="18" fill="#1e293b"/>
-                                    <circle cx="52" cy="112" r="9" fill="#f59e0b"/>
-                                    <circle cx="52" cy="112" r="4" fill="#073442"/>
-                                </g>
-                                <g>
-                                    <circle cx="186" cy="112" r="18" fill="#1e293b"/>
-                                    <circle cx="186" cy="112" r="9" fill="#f59e0b"/>
-                                    <circle cx="186" cy="112" r="4" fill="#073442"/>
-                                </g>
+                                <g><circle cx="52" cy="112" r="18" fill="#1e293b"/><circle cx="52" cy="112" r="9" fill="#f59e0b"/><circle cx="52" cy="112" r="4" fill="#073442"/></g>
+                                <g><circle cx="186" cy="112" r="18" fill="#1e293b"/><circle cx="186" cy="112" r="9" fill="#f59e0b"/><circle cx="186" cy="112" r="4" fill="#073442"/></g>
                             </g>
-
-                            <!-- ENTREGADOR CARREGANDO VOLUME / ENGRADADO DE BEBIDAS -->
                             <g transform="translate(278, 42)">
-                                <!-- Pernas em movimento (Calça azul petróleo escuro) -->
                                 <path d="M26 74 L18 114 H28 L35 82" fill="#073442"/>
                                 <path d="M38 74 L48 114 H58 L46 74" fill="#0b4659"/>
-                                <!-- Tênis -->
                                 <rect x="14" y="112" width="16" height="7" rx="3.5" fill="#dc2626"/>
                                 <rect x="46" y="112" width="16" height="7" rx="3.5" fill="#dc2626"/>
-
-                                <!-- Tronco (Camisa polo vermelha com detalhe dourado) -->
                                 <path d="M22 36 C22 30, 46 30, 46 36 L49 75 H21 L22 36 Z" fill="#dc2626"/>
                                 <rect x="21" y="54" width="28" height="4" fill="#fbbf24"/>
-
-                                <!-- Cabeça e Boné da Distribuidora -->
                                 <circle cx="35" cy="19" r="11" fill="#fed7aa"/>
-                                <!-- Boné Azul Petróleo com aba vermelha -->
                                 <path d="M24 17 C24 9, 46 9, 46 17 Z" fill="#073442"/>
                                 <path d="M36 16 H53 C55 16, 55 19, 52 19 H36 Z" fill="#dc2626"/>
-
-                                <!-- Braços segurando a caixa -->
                                 <path d="M26 42 L44 54 L58 50" stroke="#fed7aa" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-
-                                <!-- VOLUME / ENGRADADO CARREGADO PELO ENTREGADOR -->
                                 <g transform="translate(42, 32)">
-                                    <!-- Gargalos de garrafas aparecendo no topo da caixa -->
                                     <rect x="6" y="0" width="5" height="10" rx="2" fill="#15803d"/>
                                     <rect x="15" y="0" width="5" height="10" rx="2" fill="#b45309"/>
                                     <rect x="24" y="0" width="5" height="10" rx="2" fill="#15803d"/>
-                                    <!-- Caixa/Engradado -->
                                     <rect x="0" y="8" width="36" height="24" rx="4" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
                                     <rect x="8" y="14" width="20" height="5" rx="2" fill="#fef3c7"/>
                                 </g>
                             </g>
-
-                            <!-- PILHA DE CAIXAS E ENGRADADOS À DIREITA -->
                             <g transform="translate(366, 78)">
-                                <!-- Caixa Inferior Esquerda -->
                                 <rect x="0" y="44" width="42" height="36" rx="5" fill="#d97706" stroke="#92400e" stroke-width="1.5"/>
                                 <line x1="0" y1="54" x2="42" y2="54" stroke="#92400e" stroke-width="1.5"/>
                                 <rect x="13" y="61" width="16" height="6" rx="2" fill="#fef3c7"/>
-
-                                <!-- Caixa Inferior Direita (Engradado Vermelho) -->
                                 <rect x="44" y="48" width="38" height="32" rx="5" fill="#dc2626" stroke="#991b1b" stroke-width="1.5"/>
                                 <rect x="50" y="55" width="8" height="12" rx="2" fill="#991b1b"/>
                                 <rect x="68" y="55" width="8" height="12" rx="2" fill="#991b1b"/>
-
-                                <!-- Caixa Superior Empilhada -->
                                 <rect x="14" y="12" width="40" height="32" rx="5" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/>
                                 <line x1="14" y1="21" x2="54" y2="21" stroke="#b45309" stroke-width="1.5"/>
-                                <!-- Fita adesiva / Selo -->
                                 <rect x="30" y="12" width="8" height="14" fill="#073442"/>
                             </g>
                         </svg>
-                        <!-- Assinatura discreta do desenvolvedor no banner -->
                         <span class="text-[10px] font-medium tracking-wider text-slate-400/80 select-none mt-0.5 pr-1">Dev • Abraão Gessé</span>
                     </div>
                 </div>
@@ -712,7 +599,6 @@
                     </button>
                 </div>
 
-                <!-- Resumo Rápido no Canto Direito da Navegação -->
                 <div class="hidden xl:flex items-center gap-4 text-xs font-semibold text-slate-600 bg-white/80 px-4 py-2 rounded-xl border border-slate-200/60">
                     <span class="flex items-center gap-1.5">
                         <i data-lucide="boxes" class="w-4 h-4 text-[#073442]"></i>
@@ -735,7 +621,6 @@
         <!-- ABA 1: VITRINE / CATÁLOGO                                             -->
         <!-- ===================================================================== -->
         <section id="tab-vitrine" class="tab-content space-y-6">
-            <!-- Barra de Busca e Filtros -->
             <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200/70 flex flex-col md:flex-row items-center justify-between gap-4">
                 <div class="relative w-full md:w-96">
                     <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
@@ -751,19 +636,16 @@
                 </div>
             </div>
 
-            <!-- Grid de Produtos da Vitrine -->
             <div id="vitrine-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                 <!-- Preenchido via JS -->
             </div>
         </section>
 
         <!-- ===================================================================== -->
-        <!-- ABA 2: VENDAS / PDV (AUTOCOMPLETAR, GRADE/CAIXA MASTER E DESCONTO BIDIRECIONAL) -->
+        <!-- ABA 2: VENDAS / PDV                                                   -->
         <!-- ===================================================================== -->
         <section id="tab-vendas" class="tab-content hidden">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                
-                <!-- Lado Esquerdo: Lançamento Inteligente por Nome ou Código + Grade -->
                 <div class="lg:col-span-7 space-y-5">
                     <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200/70">
                         <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2 mb-4">
@@ -772,7 +654,6 @@
                         </h2>
                         
                         <form onsubmit="addPdvItemForm(event)" class="space-y-4">
-                            <!-- Campo Nome do Cliente com Autocompletar -->
                             <div class="relative">
                                 <label class="block text-xs font-bold text-slate-700 mb-1">1. Cliente (Opcional / Autocompletar)</label>
                                 <div class="relative">
@@ -785,18 +666,15 @@
                                 <div id="pdv-client-suggestions" class="hidden absolute left-0 right-0 mt-1.5 bg-white border border-slate-200 rounded-xl shadow-xl z-30 max-h-48 overflow-y-auto divide-y divide-slate-100"></div>
                             </div>
 
-                            <!-- Campo de Busca Inteligente com Autocompletar -->
                             <div class="relative">
                                 <label class="block text-xs font-bold text-slate-700 mb-1">2. Produto (Digite o Código ou Nome)</label>
                                 <div class="relative">
                                     <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
                                     <input type="text" id="pdv-product-query" autocomplete="off" oninput="handlePdvProductInput()" onfocus="handlePdvProductInput()" placeholder="Ex: 1 ou Cerveja Brahma..." required class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#073442] focus:bg-white transition">
                                 </div>
-                                <!-- Dropdown de Sugestões de Produtos -->
                                 <div id="pdv-product-suggestions" class="hidden absolute left-0 right-0 mt-1.5 bg-white border border-slate-200 rounded-xl shadow-xl z-30 max-h-64 overflow-y-auto divide-y divide-slate-100"></div>
                             </div>
 
-                            <!-- Produto Selecionado Preview -->
                             <div id="pdv-selected-info" class="hidden bg-slate-50 border border-slate-200/80 rounded-xl p-3 flex flex-wrap items-center justify-between gap-2 text-xs">
                                 <div>
                                     <span class="text-slate-500">Selecionado:</span>
@@ -814,7 +692,6 @@
                                     <input type="number" id="pdv-qty-input" min="1" value="1" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold focus:outline-none focus:ring-2 focus:ring-[#073442]">
                                 </div>
 
-                                <!-- Caixinha de Seleção: Grade / Caixa Master -->
                                 <div class="sm:col-span-4">
                                     <label class="flex items-center gap-2.5 p-2.5 bg-amber-50/70 hover:bg-amber-50 border border-amber-200/80 rounded-xl cursor-pointer select-none transition">
                                         <input type="checkbox" id="pdv-is-grade" class="w-4 h-4 rounded text-[#073442] focus:ring-[#073442]">
@@ -836,7 +713,6 @@
                     </div>
                 </div>
 
-                <!-- Lado Direito: Carrinho / Resumo da Venda -->
                 <div class="lg:col-span-5">
                     <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/70 sticky top-6 flex flex-col">
                         <div class="flex items-center justify-between pb-3 border-b border-slate-100">
@@ -853,19 +729,16 @@
                             <button onclick="clearCart()" class="text-xs font-semibold text-red-600 hover:underline">Limpar</button>
                         </div>
 
-                        <!-- Itens no Carrinho -->
                         <div id="pdv-cart-items" class="py-4 space-y-2.5 min-h-[160px] max-h-64 overflow-y-auto">
                             <!-- Preenchido via JS -->
                         </div>
 
-                        <!-- Totais, Desconto Bidirecional e Pagamento -->
                         <div class="pt-4 border-t border-slate-200 space-y-3">
                             <div class="flex items-center justify-between text-slate-600 text-sm">
                                 <span>Subtotal (Valor Inicial)</span>
                                 <span id="pdv-subtotal" class="font-semibold">R$ 0,00</span>
                             </div>
 
-                            <!-- Linha Bidirecional: Desconto (%) <-> Valor Total Final (R$) -->
                             <div class="grid grid-cols-12 gap-2.5 items-center bg-slate-50 p-3 rounded-xl border border-slate-200/80">
                                 <div class="col-span-5">
                                     <label for="pdv-discount-percent" class="block text-[11px] font-bold text-amber-800 mb-1">Desconto (%)</label>
@@ -920,64 +793,87 @@
         </section>
 
         <!-- ===================================================================== -->
-        <!-- ABA 3: HISTÓRICO DE PEDIDOS (COMPROVANTE/CUPOM + FATURAMENTO TOTAL/LÍQUIDO) -->
+        <!-- ABA 3: HISTÓRICO DE PEDIDOS (COM FILTRO DE DATA E 3 MÉTRICAS)         -->
         <!-- ===================================================================== -->
         <section id="tab-historico" class="tab-content hidden space-y-6">
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div>
-                    <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-                        <span class="p-2 bg-[#073442] text-amber-400 rounded-xl"><i data-lucide="history" class="w-5 h-5"></i></span>
-                        Histórico de Pedidos Fechados
-                    </h2>
-                    <p class="text-xs text-slate-500 mt-1">Clique em qualquer pedido para visualizar os itens detalhados, emitir o cupom ou excluir com estorno ao estoque.</p>
-                </div>
-                <div class="relative w-full sm:w-72">
-                    <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
-                    <input type="text" id="historico-search" oninput="renderHistorico()" placeholder="Buscar por cliente ou nº pedido..." class="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-[#073442]">
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                <!-- Lista de Pedidos -->
-                <div class="lg:col-span-6 space-y-3" id="historico-list">
-                    <!-- Preenchido via JS -->
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/70 space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <span class="p-2 bg-[#073442] text-amber-400 rounded-xl"><i data-lucide="history" class="w-5 h-5"></i></span>
+                            Histórico de Pedidos Fechados
+                        </h2>
+                        <p class="text-xs text-slate-500 mt-1">Clique em qualquer pedido para visualizar os itens detalhados, emitir o cupom ou excluir com estorno ao estoque.</p>
+                    </div>
+                    <div class="relative w-full sm:w-72">
+                        <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+                        <input type="text" id="historico-search" oninput="renderHistorico()" placeholder="Buscar por cliente ou nº pedido..." class="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-[#073442]">
+                    </div>
                 </div>
 
-                <!-- Painel de Detalhes do Pedido Selecionado -->
-                <div class="lg:col-span-6">
-                    <div id="historico-detail-card" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/70 sticky top-6">
-                        <div class="text-center py-12 text-slate-400">
-                            <i data-lucide="file-text" class="w-12 h-12 mx-auto mb-3 opacity-35"></i>
-                            <h3 class="font-bold text-slate-600 text-sm">Nenhum pedido selecionado</h3>
-                            <p class="text-xs mt-1">Clique sobre o nome de um cliente na lista ao lado para ver todos os produtos lançados.</p>
+                <!-- BARRA DE FILTRO POR PERÍODO (DATA INICIAL, DATA FINAL E CHECKBOX DE ATIVAÇÃO) -->
+                <div class="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3 bg-slate-50/70 p-3.5 rounded-xl border border-slate-200/60">
+                    <label class="inline-flex items-center gap-2.5 cursor-pointer select-none">
+                        <input type="checkbox" id="historico-date-filter-active" onchange="toggleHistoricoDateFilter()" class="w-4 h-4 rounded text-[#073442] focus:ring-[#073442]">
+                        <div>
+                            <span class="text-xs font-extrabold text-slate-800 block leading-tight">Filtrar por Período</span>
+                            <span class="text-[10px] text-slate-500 font-medium">Marque para limitar as vendas e métricas pelas datas abaixo</span>
+                        </div>
+                    </label>
+
+                    <div id="historico-date-inputs-wrapper" class="flex flex-wrap items-center gap-3 opacity-55 transition-opacity">
+                        <div class="flex items-center gap-2">
+                            <label for="historico-date-start" class="text-[11px] font-bold text-slate-600">Data Inicial:</label>
+                            <input type="date" id="historico-date-start" disabled onchange="renderHistorico()" class="px-2.5 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#073442] disabled:bg-slate-100 disabled:cursor-not-allowed">
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <label for="historico-date-end" class="text-[11px] font-bold text-slate-600">Data Final:</label>
+                            <input type="date" id="historico-date-end" disabled onchange="renderHistorico()" class="px-2.5 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#073442] disabled:bg-slate-100 disabled:cursor-not-allowed">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- RESUMO FINANCEIRO NO RODAPÉ DO HISTÓRICO: FATURAMENTO TOTAL E FATURAMENTO LÍQUIDO -->
-            <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200/80">
-                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <!-- Lista de Pedidos -->
+            <div class="space-y-3" id="historico-list">
+                <!-- Preenchido via JS com os detalhes expansíveis inline -->
+            </div>
+
+            <!-- RESUMO FINANCEIRO NO RODAPÉ DO HISTÓRICO (BRUTO, CUSTO OPERACIONAL/SERVIÇO E LÍQUIDO) -->
+            <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-100">
                     <div class="flex items-center gap-3">
-                        <div class="p-3 bg-[#073442] text-amber-400 rounded-2xl">
-                            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                        <div class="p-2.5 bg-[#073442] text-amber-400 rounded-2xl">
+                            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
                         </div>
                         <div>
-                            <h3 class="text-base font-extrabold text-slate-900">Resumo de Faturamento do Histórico</h3>
-                            <p class="text-xs text-slate-500">Consolidado dos pedidos exibidos (já descontando os custos operacionais e abatimentos concedidos).</p>
+                            <h3 class="text-base font-extrabold text-slate-900">Resumo Financeiro do Histórico</h3>
+                            <p class="text-xs text-slate-500" id="historico-resumo-subtitle">Consolidado geral de todos os pedidos fechados.</p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full md:w-auto">
-                        <div class="px-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 min-w-[200px]">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 block">Faturamento Total (Bruto)</span>
-                            <span id="historico-faturamento-total" class="text-xl sm:text-2xl font-black text-[#073442] mt-0.5 block">R$ 0,00</span>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- 1. Faturamento Total (Bruto) -->
+                    <div class="px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 block">Faturamento Total (Bruto)</span>
+                        <span id="historico-faturamento-total" class="text-xl sm:text-2xl font-black text-[#073442] mt-1 block">R$ 0,00</span>
+                        <span class="text-[10px] text-slate-400 font-medium mt-0.5 block">Total recebido nas vendas listadas</span>
+                    </div>
 
-                        <div class="px-5 py-3.5 rounded-2xl bg-emerald-50/80 border border-emerald-200 min-w-[200px]">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-800 block">Faturamento Líquido (Lucro)</span>
-                            <span id="historico-faturamento-liquido" class="text-xl sm:text-2xl font-black text-emerald-700 mt-0.5 block">R$ 0,00</span>
-                        </div>
+                    <!-- 2. Custo Operacional / Serviço -->
+                    <div class="px-5 py-4 rounded-2xl bg-amber-50/70 border border-amber-200/80">
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 block">Custo Operacional / Serviço</span>
+                        <span id="historico-custo-servico" class="text-xl sm:text-2xl font-black text-amber-700 mt-1 block">R$ 0,00</span>
+                        <span class="text-[10px] text-amber-700/80 font-medium mt-0.5 block">Diferença entre compra e custo (frete/manutenção)</span>
+                    </div>
+
+                    <!-- 3. Faturamento Líquido (Lucro Real) -->
+                    <div class="px-5 py-4 rounded-2xl bg-emerald-50/80 border border-emerald-200">
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-800 block">Faturamento Líquido (Lucro)</span>
+                        <span id="historico-faturamento-liquido" class="text-xl sm:text-2xl font-black text-emerald-700 mt-1 block">R$ 0,00</span>
+                        <span class="text-[10px] text-emerald-700/80 font-medium mt-0.5 block">Lucro limpo após compra e custo operacional</span>
                     </div>
                 </div>
             </div>
@@ -1023,7 +919,6 @@
                 </form>
             </div>
 
-            <!-- Listagem de Clientes -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-200/70 overflow-hidden">
                 <div class="p-4 sm:p-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <h3 class="font-bold text-slate-900 flex items-center gap-2">
@@ -1056,11 +951,9 @@
         </section>
 
         <!-- ===================================================================== -->
-        <!-- ABA ESTOQUE (CÓDIGO FIXO SEM #, CAIXA MASTER E LEITOR DE NOTAS IA)    -->
+        <!-- ABA 5: ESTOQUE                                                        -->
         <!-- ===================================================================== -->
         <section id="tab-estoque" class="tab-content hidden space-y-6">
-
-            <!-- LEITOR INTELIGENTE DE NOTA FISCAL / CUPOM (FOTO OU PDF) -->
             <div class="bg-gradient-to-r from-[#073442] to-[#0b4659] text-white p-5 sm:p-6 rounded-2xl shadow-md">
                 <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                     <div class="flex items-start gap-3.5">
@@ -1087,7 +980,6 @@
                     </div>
                 </div>
 
-                <!-- Status de Leitura / Revisão dos Itens Extraídos da Nota -->
                 <div id="invoice-loading" class="hidden mt-4 p-4 bg-white/10 rounded-xl flex items-center gap-3 text-xs font-semibold">
                     <div class="w-5 h-5 border-2 border-amber-400 border-t-transparent rounded-full animate-spin"></div>
                     <span>Analisando documento e extraindo produtos, quantidades e valores de custo...</span>
@@ -1113,7 +1005,6 @@
                 </div>
             </div>
             
-            <!-- Formulário de Cadastro Manual de Novo Produto -->
             <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200/70">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5 pb-3 border-b border-slate-100">
                     <div>
@@ -1130,7 +1021,6 @@
                 </div>
 
                 <form onsubmit="addProduct(event)" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4">
-                    <!-- Upload de Foto com Miniatura de Pré-visualização -->
                     <div class="lg:col-span-3">
                         <label class="block text-xs font-bold text-slate-700 mb-1">Foto do Produto</label>
                         <div class="flex items-center gap-3">
@@ -1169,13 +1059,11 @@
                         <input type="number" id="prod-master-qty" min="1" value="12" oninput="recalcFromPurchaseOrCost()" required placeholder="Ex: 20" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#073442]">
                     </div>
 
-                    <!-- PREÇO DE COMPRA (EDITÁVEL) -->
                     <div class="lg:col-span-2">
                         <label class="block text-xs font-bold text-slate-700 mb-1">Preço Compra (R$) *</label>
                         <input type="number" id="prod-purchase" step="0.01" min="0.01" oninput="recalcFromPurchaseOrCost()" required placeholder="Ex: 5.00" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#073442]">
                     </div>
 
-                    <!-- PREÇO DE CUSTO (BLOQUEADO - COMPRA + % CUSTO DA CONFIGURAÇÃO) -->
                     <div class="lg:col-span-3">
                         <label class="block text-xs font-bold text-slate-700 mb-1 flex items-center justify-between">
                             <span>Preço de Custo (R$)</span>
@@ -1187,13 +1075,11 @@
                         </div>
                     </div>
 
-                    <!-- % DE LUCRO (BIDIRECIONAL COM PREÇO DE VENDA) -->
                     <div class="lg:col-span-2">
                         <label class="block text-xs font-bold text-emerald-800 mb-1">% de Lucro *</label>
                         <input type="number" id="prod-profit-percent" step="0.01" min="0" value="35" oninput="recalcSaleFromPercent()" required placeholder="Ex: 35" class="w-full px-3.5 py-2.5 bg-emerald-50/50 border border-emerald-200 rounded-xl text-sm font-bold text-emerald-900 focus:outline-none focus:ring-2 focus:ring-emerald-600">
                     </div>
 
-                    <!-- PREÇO DE VENDA (BIDIRECIONAL COM % DE LUCRO) -->
                     <div class="lg:col-span-3">
                         <label class="block text-xs font-bold text-emerald-800 mb-1">Preço de Venda (R$) *</label>
                         <input type="number" id="prod-sale-price" step="0.01" min="0.01" oninput="recalcPercentFromSale()" required placeholder="Ex: 8.00" class="w-full px-3.5 py-2.5 bg-emerald-50/50 border border-emerald-200 rounded-xl text-sm font-black text-emerald-900 focus:outline-none focus:ring-2 focus:ring-emerald-600">
@@ -1212,7 +1098,6 @@
                 </form>
             </div>
 
-            <!-- Tabela de Estoque (Código Fixo sem # primeiro, Foto em Miniatura, Nome e demais dados) -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-200/70 overflow-hidden">
                 <div class="p-4 sm:p-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <h3 class="font-bold text-slate-900 flex items-center gap-2">
@@ -1249,10 +1134,94 @@
         </section>
 
         <!-- ===================================================================== -->
-        <!-- ABA CONFIGURAÇÃO (LOGIN MODERADOR 544111 + CONTROLE DE ABAS)          -->
+        <!-- ABA CONFIGURAÇÃO ( COM BOTÃO PÚBLICO PARA VER ATUALIZAÇÕES DO APP )   -->
         <!-- ===================================================================== -->
-        <section id="tab-configuracao" class="tab-content hidden">
+        <section id="tab-configuracao" class="tab-content hidden space-y-6">
             
+            <!-- SEÇÃO PÚBLICA: BOTÃO PARA VER ATUALIZAÇÕES DO APP (SEM PRECISAR DE SENHA) -->
+            <div class="bg-white p-5 sm:p-6 rounded-3xl shadow-sm border border-slate-200/80">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-start gap-3.5">
+                        <div class="p-3 bg-amber-100 text-amber-800 rounded-2xl flex-shrink-0">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-slate-900 mb-1">
+                                Versão 1.4.0 Ativa
+                            </div>
+                            <h2 class="text-base sm:text-lg font-extrabold text-slate-900">Atualizações do App</h2>
+                            <p class="text-xs text-slate-500">Confira as novidades já implementadas e o que está planejado para as próximas versões.</p>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="toggleUpdatesPanel()" id="toggle-updates-btn" class="px-5 py-2.5 bg-[#073442] hover:bg-[#0b4659] text-white font-bold text-xs sm:text-sm rounded-xl shadow-sm transition flex items-center justify-center gap-2 self-start sm:self-center">
+                        <i data-lucide="list-checks" class="w-4 h-4 text-amber-400"></i>
+                        <span id="toggle-updates-btn-label">Ver Atualizações do App</span>
+                    </button>
+                </div>
+
+                <!-- Lista do Changelog (Oculta até clicar no botão) -->
+                <div id="app-updates-panel" class="hidden mt-5 pt-5 border-t border-slate-100 space-y-4 max-h-[420px] overflow-y-auto pr-1">
+                    <!-- Versão Atual 1.4.0 -->
+                    <div class="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200/80 space-y-3">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="px-3 py-1 bg-[#073442] text-amber-300 text-xs font-black rounded-xl">Versão 1.4.0 (Atual)</span>
+                            <span class="text-xs font-bold text-slate-400">17 de Novembro de 2026</span>
+                        </div>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                                <span><strong>Filtro por Período no Histórico:</strong> Agora é possível filtrar os pedidos por Data Inicial e Data Final ativando a caixinha de seleção no topo do histórico.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                                <span><strong>Custo Operacional / Serviço no Resumo:</strong> Inclusão do indicador de Custo Operacional (frete/manutenção) ao lado do Faturamento Bruto e do Faturamento Líquido no rodapé do histórico.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                                <span><strong>Histórico de Atualizações Público:</strong> Botão na tela de Configuração para consultar as novidades do sistema a qualquer momento.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Versão 1.3.0 -->
+                    <div class="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200/80 space-y-3">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="px-3 py-1 bg-slate-200 text-slate-800 text-xs font-extrabold rounded-xl">Versão 1.3.0</span>
+                            <span class="text-xs font-bold text-slate-400">17 de Novembro de 2026</span>
+                        </div>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                                <span><strong>Créditos do Desenvolvedor:</strong> Inclusão oficial da assinatura "Desenvolvido por Abraão Gessé" no rodapé e no banner do sistema.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                                <span><strong>Desconto Bidirecional no PDV:</strong> Campo de desconto por porcentagem integrado ao valor total do cupom (ajuste automático em mão dupla).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                                <span><strong>Detalhes Expansíveis e Cupom:</strong> Visualização de detalhes em formato sanfona direto na linha do pedido, com emissão de comprovante contendo o logo oficial da Distribuidora.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Versão Base 1.2.0 -->
+                    <div class="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200/80 space-y-3">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="px-3 py-1 bg-slate-200 text-slate-700 text-xs font-bold rounded-xl">Versão 1.2.0</span>
+                            <span class="text-xs font-bold text-slate-400">Versão Base</span>
+                        </div>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="dot" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Vitrine de bebidas, controle de estoque com código fixo, leitura de notas por IA e painel do moderador.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <!-- TELA DE BLOQUEIO: LOGIN RESERVADO AO MODERADOR -->
             <div id="moderator-login-card" class="max-w-md mx-auto my-6 bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-200/80 text-center">
                 <div class="w-16 h-16 bg-[#073442] text-amber-400 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-md">
@@ -1275,9 +1244,8 @@
                 </form>
             </div>
 
-            <!-- PAINEL DESBLOQUEADO DO MODERADOR (APÓS DIGITAR 544111) -->
+            <!-- PAINEL DESBLOQUEADO DO MODERADOR -->
             <div id="moderator-panel" class="hidden space-y-6">
-                <!-- Barra Superior do Moderador -->
                 <div class="bg-[#073442] text-white p-4 sm:p-5 rounded-2xl shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div class="flex items-center gap-3">
                         <div class="p-2.5 bg-amber-400/20 text-amber-300 rounded-xl">
@@ -1295,8 +1263,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    
-                    <!-- 1. CONTROLE DA PORCENTAGEM DE CUSTO OPERACIONAL -->
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 space-y-5">
                         <div class="flex items-start gap-3 pb-4 border-b border-slate-100">
                             <div class="p-2.5 bg-emerald-50 text-emerald-700 rounded-xl">
@@ -1323,14 +1289,9 @@
                                     </button>
                                 </div>
                             </div>
-                            <p class="text-[11px] text-slate-500 flex items-center gap-1.5">
-                                <i data-lucide="info" class="w-3.5 h-3.5 text-slate-400"></i>
-                                Ao alterar, o Preço de Custo e os Preços de Venda são recalculados mantendo a margem de lucro de cada produto.
-                            </p>
                         </form>
                     </div>
 
-                    <!-- 2. CONTROLE DE VISIBILIDADE DAS ABAS (HABILITAR / DESABILITAR) -->
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
                         <div class="flex items-start gap-3 pb-3 border-b border-slate-100">
                             <div class="p-2.5 bg-indigo-50 text-indigo-700 rounded-xl">
@@ -1347,7 +1308,6 @@
                         </div>
                     </div>
 
-                    <!-- 3. PERSONALIZAÇÃO DE CORES DO BANNER -->
                     <div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 space-y-5">
                         <div class="flex items-start gap-3 pb-4 border-b border-slate-100">
                             <div class="p-2.5 bg-amber-50 text-amber-600 rounded-xl">
@@ -1360,7 +1320,6 @@
                         </div>
 
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            <!-- Temas Pré-Definidos -->
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 mb-2">Temas Pré-Definidos</label>
                                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
@@ -1368,17 +1327,14 @@
                                         <div class="w-full h-6 rounded-lg mb-1.5 border border-slate-200" style="background: linear-gradient(125deg, #ffffff, #e3eff5);"></div>
                                         <span class="text-[11px] font-bold text-slate-700 block">Claro Padrão</span>
                                     </button>
-
                                     <button type="button" onclick="applyBannerTheme('#fffbeb', '#fde68a', '#78350f', '#92400e')" class="p-2.5 rounded-xl border border-slate-200 hover:border-amber-500 text-left transition">
                                         <div class="w-full h-6 rounded-lg mb-1.5 border border-amber-200" style="background: linear-gradient(125deg, #fffbeb, #fde68a);"></div>
                                         <span class="text-[11px] font-bold text-slate-700 block">Chopp Dourado</span>
                                     </button>
-
                                     <button type="button" onclick="applyBannerTheme('#f0f9ff', '#bae6fd', '#0c4a6e', '#0369a1')" class="p-2.5 rounded-xl border border-slate-200 hover:border-sky-500 text-left transition">
                                         <div class="w-full h-6 rounded-lg mb-1.5 border border-sky-200" style="background: linear-gradient(125deg, #f0f9ff, #bae6fd);"></div>
                                         <span class="text-[11px] font-bold text-slate-700 block">Azul Gelado</span>
                                     </button>
-
                                     <button type="button" onclick="applyBannerTheme('#fef2f2', '#fecaca', '#7f1d1d', '#991b1b')" class="p-2.5 rounded-xl border border-slate-200 hover:border-red-500 text-left transition">
                                         <div class="w-full h-6 rounded-lg mb-1.5 border border-red-200" style="background: linear-gradient(125deg, #fef2f2, #fecaca);"></div>
                                         <span class="text-[11px] font-bold text-slate-700 block">Destaque Rubi</span>
@@ -1386,7 +1342,6 @@
                                 </div>
                             </div>
 
-                            <!-- Paleta de Cores Personalizada -->
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 mb-2">Paleta Livre de Cores</label>
                                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 items-center">
@@ -1397,7 +1352,6 @@
                                             <span id="hex-start" class="text-xs font-mono font-semibold text-slate-600">#FFFFFF</span>
                                         </div>
                                     </div>
-
                                     <div>
                                         <span class="text-[11px] text-slate-500 block mb-1">Cor Final</span>
                                         <div class="flex items-center gap-2 bg-slate-50 p-1.5 rounded-xl border border-slate-200">
@@ -1405,7 +1359,6 @@
                                             <span id="hex-end" class="text-xs font-mono font-semibold text-slate-600">#E3EFF5</span>
                                         </div>
                                     </div>
-
                                     <div class="col-span-2 sm:col-span-1 flex items-end h-full">
                                         <button type="button" onclick="applyBannerTheme('#ffffff', '#e3eff5', '#0f172a', '#475569')" class="w-full py-2.5 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-xl transition flex items-center justify-center gap-1.5">
                                             <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
@@ -1417,7 +1370,6 @@
                         </div>
                     </div>
 
-                    <!-- 4. BACKUP GERAL E RESTAURAÇÃO DO SISTEMA -->
                     <div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
                             <div class="flex items-start gap-3">
@@ -1440,13 +1392,11 @@
                                 <i data-lucide="download" class="w-4 h-4 text-amber-400"></i>
                                 Baixar Backup Geral (.json)
                             </button>
-
                             <label class="cursor-pointer py-3 px-4 bg-amber-400 hover:bg-amber-300 text-slate-900 font-extrabold text-xs sm:text-sm rounded-xl shadow-sm transition flex items-center justify-center gap-2">
                                 <i data-lucide="upload" class="w-4 h-4"></i>
                                 Restaurar Backup (.json)
                                 <input type="file" id="restore-backup-input" accept=".json,application/json" onchange="importSystemBackup(event)" class="hidden">
                             </label>
-
                             <button type="button" onclick="resetSystemToDefault()" class="py-3 px-4 bg-red-50 hover:bg-red-600 text-red-600 hover:text-white border border-red-200 font-bold text-xs sm:text-sm rounded-xl transition flex items-center justify-center gap-2">
                                 <i data-lucide="trash-2" class="w-4 h-4"></i>
                                 Resetar Dados de Fábrica
@@ -1469,13 +1419,10 @@
 
     <!-- LÓGICA JAVASCRIPT COMPLETA -->
     <script>
-        // =========================================================================
-        // ESTADO INICIAL E PERSISTÊNCIA AUTOMÁTICA (LOCALSTORAGE)
-        // =========================================================================
         const STORAGE_KEY = "distribuidora_elinilson_db_v1";
         const MODERATOR_CODE = "544111";
         let isModeratorAuthenticated = false;
-        let costOverheadPercent = 10; // % de custo operacional configurada pelo moderador
+        let costOverheadPercent = 10;
         let nextSequenceCode = 6;
         let nextOrderNumber = 1001;
         let currentVitrineCategory = 'Todos';
@@ -1495,7 +1442,6 @@
             subtitleColor: '#475569'
         };
 
-        // Controle de visibilidade das abas (Configuração permanece sempre visível para permitir o login)
         let tabVisibility = {
             vitrine: { label: 'Vitrine / Catálogo', enabled: true },
             vendas: { label: 'Vendas / PDV', enabled: true },
@@ -1504,7 +1450,6 @@
             estoque: { label: 'Estoque', enabled: true }
         };
 
-        // Lista inicial de produtos com Preço de Compra, % de Lucro individual e Foto
         let products = [
             { code: 1, name: "Cerveja Brahma Chopp 350ml", category: "Cervejas", qty: 120, masterQty: 12, purchasePrice: 2.50, profitPercent: 35, image: null },
             { code: 2, name: "Cerveja Heineken Long Neck 330ml", category: "Cervejas", qty: 96, masterQty: 24, purchasePrice: 4.20, profitPercent: 35, image: null },
@@ -1513,28 +1458,37 @@
             { code: 5, name: "Whisky Red Label 1 Litro", category: "Destilados", qty: 24, masterQty: 12, purchasePrice: 78.00, profitPercent: 30, image: null }
         ];
 
-        // Carteira de clientes inicial
         let clients = [
             { id: 1, name: "Carlos Eduardo Mendes", fantasy: "Bar e Petiscaria do Cadu", phone: "(98) 98812-3456", address: "Av. Principal, 450 - Centro" },
             { id: 2, name: "Mariana Costa Souza", fantasy: "Conveniência Estrela", phone: "(98) 99123-7890", address: "Rua das Flores, 120 - Cohama" }
         ];
 
-        // Histórico de pedidos fechados
         let orderHistory = [];
-
-        // Carrinho de vendas atual
         let cart = [];
 
-        // Normaliza textos removendo acentos e convertendo para minúsculas
         function normalizeText(str) {
-            return String(str || '')
-                .normalize('NFD')
-                .replace(/[\u0300-\u036f]/g, '')
-                .toLowerCase()
-                .trim();
+            return String(str || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
         }
 
-        // Salva automaticamente todo o estado no localStorage
+        function getTodayIsoDate() {
+            const now = new Date();
+            const y = now.getFullYear();
+            const m = String(now.getMonth() + 1).padStart(2, '0');
+            const d = String(now.getDate()).padStart(2, '0');
+            return `${y}-${m}-${d}`;
+        }
+
+        function parseOrderIsoDate(order) {
+            if (order.isoDate && /^\d{4}-\d{2}-\d{2}$/.test(order.isoDate)) {
+                return order.isoDate;
+            }
+            const match = String(order.date || '').match(/(\d{2})\/(\d{2})\/(\d{4})/);
+            if (match) {
+                return `${match[3]}-${match[2]}-${match[1]}`;
+            }
+            return '';
+        }
+
         function saveSystemState() {
             try {
                 const payload = {
@@ -1557,7 +1511,6 @@
             }
         }
 
-        // Carrega o estado salvo do localStorage ao iniciar
         function loadSystemState() {
             try {
                 const raw = localStorage.getItem(STORAGE_KEY);
@@ -1611,19 +1564,14 @@
             if (hexEnd) hexEnd.textContent = bannerThemeState.endColor.toUpperCase();
         }
 
-        // =========================================================================
-        // FUNÇÕES UTILITÁRIAS E CÁLCULOS DE PREÇO
-        // =========================================================================
         function formatCurrency(value) {
             return (Number(value) || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         }
 
-        // Preço de Custo = Preço de Compra + % de Custo da aba Configurações
         function calculateProductCost(purchasePrice) {
             return (Number(purchasePrice) || 0) * (1 + costOverheadPercent / 100);
         }
 
-        // Preço de Venda = Preço de Custo + % de Lucro do produto
         function calculateFinalPrice(product) {
             const costPrice = calculateProductCost(product.purchasePrice);
             const profitPct = product.profitPercent !== undefined ? product.profitPercent : 35;
@@ -1687,9 +1635,6 @@
             };
         }
 
-        // =========================================================================
-        // NAVEGAÇÃO E VISIBILIDADE DAS ABAS
-        // =========================================================================
         function applyTabVisibility() {
             Object.keys(tabVisibility).forEach(key => {
                 const btn = document.getElementById(`tab-btn-${key}`);
@@ -1709,6 +1654,7 @@
 
         function renderTabVisibilityControls() {
             const container = document.getElementById('tab-visibility-controls');
+            if (!container) return;
             container.innerHTML = Object.entries(tabVisibility).map(([key, info]) => `
                 <label class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-200/80 cursor-pointer hover:bg-slate-100/70 transition">
                     <span class="text-xs font-bold text-slate-800">${info.label}</span>
@@ -1759,9 +1705,7 @@
             document.getElementById('next-product-code-badge').textContent = `${nextSequenceCode}`;
         }
 
-        // =========================================================================
-        // ABA 1: VITRINE / CATÁLOGO (CÓDIGO LIMPO SEM #)
-        // =========================================================================
+        // Vitrine
         function setVitrineCategory(category) {
             currentVitrineCategory = category;
             document.querySelectorAll('.vitrine-cat-btn').forEach(btn => {
@@ -1813,22 +1757,13 @@
                     <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/70 hover:shadow-md transition flex flex-col justify-between group">
                         <div>
                             <div class="flex items-center justify-between gap-2 mb-3">
-                                <span class="px-2.5 py-1 bg-[#073442] text-amber-300 text-xs font-black rounded-lg">
-                                    Cód. ${p.code}
-                                </span>
-                                <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600">
-                                    ${p.category}
-                                </span>
+                                <span class="px-2.5 py-1 bg-[#073442] text-amber-300 text-xs font-black rounded-lg">Cód. ${p.code}</span>
+                                <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600">${p.category}</span>
                             </div>
-
                             ${photoHtml}
-
-                            <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-[#073442] transition">
-                                ${p.name}
-                            </h3>
+                            <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-[#073442] transition">${p.name}</h3>
                             <p class="text-[11px] text-slate-500 mt-1">Grade / Cx. Master: <strong>${p.masterQty} un.</strong> (${formatCurrency(gradePrice)})</p>
                         </div>
-
                         <div class="mt-5 pt-4 border-t border-slate-100">
                             <div class="flex items-end justify-between mb-3">
                                 <div>
@@ -1841,7 +1776,6 @@
                                     </span>
                                 </div>
                             </div>
-
                             <button onclick="quickAddToCart(${p.code})" ${isOut ? 'disabled' : ''} class="w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition ${isOut ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'bg-amber-400 hover:bg-amber-500 text-slate-900 shadow-sm'}">
                                 <i data-lucide="shopping-bag" class="w-4 h-4"></i>
                                 ${isOut ? 'Indisponível' : 'Adicionar ao Pedido'}
@@ -1854,9 +1788,7 @@
             lucide.createIcons();
         }
 
-        // =========================================================================
-        // ABA 2: VENDAS / PDV (AUTOCOMPLETAR, GRADE E DESCONTO BIDIRECIONAL)
-        // =========================================================================
+        // PDV / Vendas
         function handlePdvProductInput() {
             const input = document.getElementById('pdv-product-query');
             const dropdown = document.getElementById('pdv-product-suggestions');
@@ -1869,17 +1801,12 @@
                 return;
             }
 
-            const matches = products.filter(p => 
-                String(p.code).startsWith(query) || normalizeText(p.name).includes(query)
-            );
-
+            const matches = products.filter(p => String(p.code).startsWith(query) || normalizeText(p.name).includes(query));
             const exactCodeMatch = products.find(p => String(p.code) === query);
-            if (exactCodeMatch) {
-                selectPdvProduct(exactCodeMatch.code, false);
-            }
+            if (exactCodeMatch) selectPdvProduct(exactCodeMatch.code, false);
 
             if (matches.length === 0) {
-                dropdown.innerHTML = `<div class="p-3 text-xs text-slate-400 text-center">Nenhum produto encontrado para "${input.value}"</div>`;
+                dropdown.innerHTML = `<div class="p-3 text-xs text-slate-400 text-center">Nenhum produto encontrado</div>`;
                 dropdown.classList.remove('hidden');
                 return;
             }
@@ -1889,10 +1816,7 @@
                 return `
                     <button type="button" onclick="selectPdvProduct(${p.code}, true)" class="w-full text-left px-4 py-2.5 hover:bg-slate-50 flex items-center justify-between gap-2 transition">
                         <div class="flex items-center gap-2.5 min-w-0">
-                            ${p.image 
-                                ? `<img src="${p.image}" alt="" class="w-8 h-8 rounded-lg object-cover border border-slate-200 flex-shrink-0">`
-                                : `<div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 flex-shrink-0"><i data-lucide="package" class="w-4 h-4"></i></div>`
-                            }
+                            ${p.image ? `<img src="${p.image}" alt="" class="w-8 h-8 rounded-lg object-cover border border-slate-200 flex-shrink-0">` : `<div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 flex-shrink-0"><i data-lucide="package" class="w-4 h-4"></i></div>`}
                             <div class="min-w-0">
                                 <span class="inline-block px-2 py-0.5 bg-[#073442] text-amber-300 font-black text-[11px] rounded mr-1.5">${p.code}</span>
                                 <span class="text-xs font-bold text-slate-800">${p.name}</span>
@@ -1911,13 +1835,11 @@
         function selectPdvProduct(code, hideDropdown = true) {
             const prod = products.find(p => p.code === code);
             if (!prod) return;
-
             selectedPdvProductCode = prod.code;
             if (hideDropdown) {
                 document.getElementById('pdv-product-query').value = `${prod.code} - ${prod.name}`;
                 document.getElementById('pdv-product-suggestions').classList.add('hidden');
             }
-
             const infoBox = document.getElementById('pdv-selected-info');
             document.getElementById('pdv-selected-name').textContent = `${prod.code} - ${prod.name}`;
             document.getElementById('pdv-selected-unit-price').textContent = formatCurrency(calculateFinalPrice(prod));
@@ -1933,22 +1855,15 @@
             const rawVal = input.value;
             const query = normalizeText(rawVal);
 
-            if (receiptLabel) {
-                receiptLabel.textContent = rawVal.trim() || 'Cliente Balcão';
-            }
-            if (clearBtn) {
-                clearBtn.classList.toggle('hidden', !rawVal);
-            }
+            if (receiptLabel) receiptLabel.textContent = rawVal.trim() || 'Cliente Balcão';
+            if (clearBtn) clearBtn.classList.toggle('hidden', !rawVal);
 
             if (!query) {
                 dropdown.classList.add('hidden');
                 return;
             }
 
-            const matches = clients.filter(c => 
-                normalizeText(c.name).includes(query) || (c.fantasy && normalizeText(c.fantasy).includes(query))
-            );
-
+            const matches = clients.filter(c => normalizeText(c.name).includes(query) || (c.fantasy && normalizeText(c.fantasy).includes(query)));
             if (matches.length === 0) {
                 dropdown.classList.add('hidden');
                 return;
@@ -2008,14 +1923,12 @@
             if (!targetCode) {
                 const num = parseInt(rawQuery, 10);
                 const normQuery = normalizeText(rawQuery);
-                const found = !isNaN(num) 
-                    ? products.find(p => p.code === num) 
-                    : products.find(p => normalizeText(p.name).includes(normQuery));
+                const found = !isNaN(num) ? products.find(p => p.code === num) : products.find(p => normalizeText(p.name).includes(normQuery));
                 if (found) targetCode = found.code;
             }
 
             if (!targetCode) {
-                showToast('Selecione um produto válido da lista ou digite o código correto.', 'error');
+                showToast('Selecione um produto válido da lista.', 'error');
                 return;
             }
 
@@ -2031,27 +1944,21 @@
 
         function addToCart(code, inputQty, isGrade = false) {
             const product = products.find(p => p.code === code);
-            if (!product) {
-                showToast(`Produto com código ${code} não encontrado!`, 'error');
-                return false;
-            }
+            if (!product) return false;
 
             const masterMultiplier = isGrade ? (product.masterQty || 1) : 1;
             const totalUnitsToAdd = inputQty * masterMultiplier;
-
             const existingItem = cart.find(item => item.code === code);
             const currentUnitsInCart = existingItem ? existingItem.units : 0;
 
             if (currentUnitsInCart + totalUnitsToAdd > product.qty) {
-                showToast(`Estoque insuficiente! Disponível: ${product.qty} un. (Tentando adicionar ${totalUnitsToAdd} un.)`, 'error');
+                showToast(`Estoque insuficiente! Disponível: ${product.qty} un.`, 'error');
                 return false;
             }
 
             if (existingItem) {
                 existingItem.units += totalUnitsToAdd;
-                if (isGrade) {
-                    existingItem.gradeNote = `Inclui grades de ${product.masterQty} un.`;
-                }
+                if (isGrade) existingItem.gradeNote = `Inclui grades de ${product.masterQty} un.`;
             } else {
                 cart.push({
                     code: product.code,
@@ -2064,12 +1971,7 @@
             updateCartBadge();
             renderCart();
             saveSystemState();
-            showToast(
-                isGrade 
-                    ? `${inputQty} grade(s) (${totalUnitsToAdd} un.) de ${product.name} adicionada!` 
-                    : `${totalUnitsToAdd}x ${product.name} adicionado!`,
-                'success'
-            );
+            showToast(`${totalUnitsToAdd}x ${product.name} adicionado!`, 'success');
             return true;
         }
 
@@ -2094,7 +1996,6 @@
             updateCartBadge();
             renderCart();
             saveSystemState();
-            showToast('Pedido limpo.', 'info');
         }
 
         function updateCartBadge() {
@@ -2125,7 +2026,6 @@
             return subtotal * (1 - (currentPdvDiscountPercent / 100));
         }
 
-        // Mão Dupla 1: Digitou % de desconto -> recalcula Valor Total
         function recalcTotalFromDiscountPercent() {
             const subtotal = getCartSubtotal();
             const discInput = document.getElementById('pdv-discount-percent');
@@ -2142,7 +2042,6 @@
             calculateChange();
         }
 
-        // Mão Dupla 2: Deduziu / editou direto no Valor Total -> recalcula % de desconto
         function recalcDiscountPercentFromTotal() {
             const subtotal = getCartSubtotal();
             const discInput = document.getElementById('pdv-discount-percent');
@@ -2242,7 +2141,7 @@
 
         function finalizeSale() {
             if (cart.length === 0) {
-                showToast('Adicione pelo menos um produto antes de fechar o pedido.', 'error');
+                showToast('Adicione pelo menos um produto ao pedido.', 'error');
                 return;
             }
 
@@ -2250,17 +2149,19 @@
             const finalTotal = getCartFinalTotal();
             const discountAmount = Math.max(0, subtotal - finalTotal);
             const discountPercent = subtotal > 0 ? (discountAmount / subtotal) * 100 : 0;
-
             const clientName = document.getElementById('pdv-client-input').value.trim() || 'Cliente Balcão';
             const paymentMethod = document.getElementById('pdv-payment-method').value;
 
+            let totalOrderPurchase = 0;
             let totalOrderCost = 0;
 
-            // Snapshot dos itens vendidos com custo unitário histórico para cálculo exato de lucro líquido
             const soldItemsSnapshot = cart.map(item => {
                 const prod = products.find(p => p.code === item.code);
                 const unitPrice = prod ? calculateFinalPrice(prod) : 0;
+                const unitPurchase = prod ? (Number(prod.purchasePrice) || 0) : 0;
                 const unitCost = prod ? calculateProductCost(prod.purchasePrice) : 0;
+
+                totalOrderPurchase += unitPurchase * item.units;
                 totalOrderCost += unitCost * item.units;
 
                 return {
@@ -2268,23 +2169,21 @@
                     name: item.name,
                     units: item.units,
                     unitPrice: unitPrice,
+                    unitPurchase: unitPurchase,
                     unitCost: unitCost,
                     subtotal: unitPrice * item.units,
                     gradeNote: item.gradeNote
                 };
             });
 
-            // Dá baixa automática no estoque
             cart.forEach(item => {
                 const prod = products.find(p => p.code === item.code);
-                if (prod) {
-                    prod.qty = Math.max(0, prod.qty - item.units);
-                }
+                if (prod) prod.qty = Math.max(0, prod.qty - item.units);
             });
 
+            const serviceCost = Math.max(0, totalOrderCost - totalOrderPurchase);
             const netProfit = finalTotal - totalOrderCost;
 
-            // Registra no Histórico de Pedidos
             const newOrder = {
                 id: nextOrderNumber++,
                 clientName: clientName,
@@ -2293,8 +2192,11 @@
                 discountPercent: Number(discountPercent.toFixed(2)),
                 discountAmount: discountAmount,
                 total: finalTotal,
+                totalPurchase: totalOrderPurchase,
                 totalCost: totalOrderCost,
+                serviceCost: serviceCost,
                 netProfit: netProfit,
+                isoDate: getTodayIsoDate(),
                 date: new Date().toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
                 items: soldItemsSnapshot
             };
@@ -2318,17 +2220,50 @@
         }
 
         // =========================================================================
-        // ABA 3: HISTÓRICO DE PEDIDOS (COMPROVANTE/CUPOM + FATURAMENTO TOTAL/LÍQUIDO)
+        // HISTÓRICO DE PEDIDOS (FILTRO DE DATA, 3 MÉTRICAS E DETALHES SANFONA)
         // =========================================================================
-        function calculateOrderNetProfit(order) {
-            if (typeof order.netProfit === 'number') {
-                return order.netProfit;
+        function toggleHistoricoDateFilter() {
+            const checkbox = document.getElementById('historico-date-filter-active');
+            const startInput = document.getElementById('historico-date-start');
+            const endInput = document.getElementById('historico-date-end');
+            const wrapper = document.getElementById('historico-date-inputs-wrapper');
+            if (!checkbox || !startInput || !endInput) return;
+
+            const isChecked = checkbox.checked;
+            startInput.disabled = !isChecked;
+            endInput.disabled = !isChecked;
+
+            if (isChecked) {
+                wrapper.classList.remove('opacity-55');
+                const today = getTodayIsoDate();
+                if (!startInput.value) startInput.value = today;
+                if (!endInput.value) endInput.value = today;
+            } else {
+                wrapper.classList.add('opacity-55');
             }
-            // Fallback seguro para pedidos antigos salvos antes da atualização
-            const estimatedCost = (order.items || []).reduce((sum, it) => {
-                if (typeof it.unitCost === 'number') {
-                    return sum + (it.unitCost * it.units);
+
+            renderHistorico();
+        }
+
+        function calculateOrderServiceCost(order) {
+            if (typeof order.serviceCost === 'number') return order.serviceCost;
+            return (order.items || []).reduce((sum, it) => {
+                if (typeof it.unitCost === 'number' && typeof it.unitPurchase === 'number') {
+                    return sum + Math.max(0, (it.unitCost - it.unitPurchase) * it.units);
                 }
+                const prod = products.find(p => p.code === it.code);
+                if (prod) {
+                    const cost = calculateProductCost(prod.purchasePrice);
+                    const purchase = Number(prod.purchasePrice) || 0;
+                    return sum + Math.max(0, (cost - purchase) * it.units);
+                }
+                return sum;
+            }, 0);
+        }
+
+        function calculateOrderNetProfit(order) {
+            if (typeof order.netProfit === 'number') return order.netProfit;
+            const estimatedCost = (order.items || []).reduce((sum, it) => {
                 const prod = products.find(p => p.code === it.code);
                 const cost = prod ? calculateProductCost(prod.purchasePrice) : (it.unitPrice * 0.7);
                 return sum + (cost * it.units);
@@ -2338,38 +2273,56 @@
 
         function renderHistorico() {
             const listEl = document.getElementById('historico-list');
-            const detailEl = document.getElementById('historico-detail-card');
             const grossEl = document.getElementById('historico-faturamento-total');
+            const serviceCostEl = document.getElementById('historico-custo-servico');
             const netEl = document.getElementById('historico-faturamento-liquido');
-            if (!listEl || !detailEl) return;
+            const subtitleEl = document.getElementById('historico-resumo-subtitle');
+            if (!listEl) return;
 
             const search = normalizeText(document.getElementById('historico-search')?.value || '');
-            const filtered = orderHistory.filter(o =>
-                normalizeText(o.clientName).includes(search) || String(o.id).includes(search)
-            );
+            const isDateFilterActive = document.getElementById('historico-date-filter-active')?.checked || false;
+            const startDate = document.getElementById('historico-date-start')?.value || '';
+            const endDate = document.getElementById('historico-date-end')?.value || '';
 
-            // Calcula Faturamento Total e Faturamento Líquido dos pedidos exibidos
+            const filtered = orderHistory.filter(o => {
+                const matchesText = normalizeText(o.clientName).includes(search) || String(o.id).includes(search);
+                if (!matchesText) return false;
+
+                if (isDateFilterActive) {
+                    const orderIso = parseOrderIsoDate(o);
+                    if (!orderIso) return false;
+                    if (startDate && orderIso < startDate) return false;
+                    if (endDate && orderIso > endDate) return false;
+                }
+                return true;
+            });
+
             const totalGross = filtered.reduce((acc, o) => acc + (Number(o.total) || 0), 0);
+            const totalServiceCost = filtered.reduce((acc, o) => acc + calculateOrderServiceCost(o), 0);
             const totalNet = filtered.reduce((acc, o) => acc + calculateOrderNetProfit(o), 0);
 
             if (grossEl) grossEl.textContent = formatCurrency(totalGross);
+            if (serviceCostEl) serviceCostEl.textContent = formatCurrency(totalServiceCost);
             if (netEl) {
                 netEl.textContent = formatCurrency(totalNet);
-                netEl.className = `text-xl sm:text-2xl font-black mt-0.5 block ${totalNet >= 0 ? 'text-emerald-700' : 'text-red-600'}`;
+                netEl.className = `text-xl sm:text-2xl font-black mt-1 block ${totalNet >= 0 ? 'text-emerald-700' : 'text-red-600'}`;
+            }
+
+            if (subtitleEl) {
+                if (isDateFilterActive && (startDate || endDate)) {
+                    const fmtStart = startDate ? startDate.split('-').reverse().join('/') : '...';
+                    const fmtEnd = endDate ? endDate.split('-').reverse().join('/') : '...';
+                    subtitleEl.textContent = `Filtrado pelo período de ${fmtStart} até ${fmtEnd} (${filtered.length} pedido(s)).`;
+                } else {
+                    subtitleEl.textContent = `Consolidado geral de todos os pedidos fechados (${filtered.length} pedido(s)).`;
+                }
             }
 
             if (filtered.length === 0) {
                 listEl.innerHTML = `
                     <div class="bg-white p-8 rounded-2xl border border-slate-200/70 text-center text-slate-400">
                         <i data-lucide="inbox" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
-                        <p class="text-xs font-semibold">Nenhum pedido fechado encontrado.</p>
-                    </div>
-                `;
-                detailEl.innerHTML = `
-                    <div class="text-center py-12 text-slate-400">
-                        <i data-lucide="file-text" class="w-12 h-12 mx-auto mb-3 opacity-35"></i>
-                        <h3 class="font-bold text-slate-600 text-sm">Nenhum pedido selecionado</h3>
-                        <p class="text-xs mt-1">Os pedidos fechados na aba Vendas / PDV aparecerão aqui.</p>
+                        <p class="text-xs font-semibold">Nenhum pedido encontrado para os filtros atuais.</p>
                     </div>
                 `;
                 lucide.createIcons();
@@ -2377,103 +2330,90 @@
             }
 
             listEl.innerHTML = filtered.map(order => {
-                const isSelected = selectedHistoryOrderId === order.id;
+                const isExpanded = selectedHistoryOrderId === order.id;
                 const hasDiscount = (order.discountPercent || 0) > 0;
+
                 return `
-                    <div onclick="selectHistoryOrder(${order.id})" class="cursor-pointer bg-white p-4 rounded-2xl border transition flex items-center justify-between gap-3 ${isSelected ? 'border-[#073442] ring-2 ring-[#073442]/15 shadow-md' : 'border-slate-200/70 hover:border-slate-300 shadow-xs'}">
-                        <div class="min-w-0">
-                            <div class="flex items-center gap-2 flex-wrap">
-                                <span class="px-2 py-0.5 bg-[#073442] text-amber-300 text-[11px] font-black rounded-md">Pedido ${order.id}</span>
-                                <span class="text-[11px] text-slate-400 font-medium">${order.date}</span>
-                                ${hasDiscount ? `<span class="px-1.5 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold rounded">-${order.discountPercent}% desc.</span>` : ''}
+                    <div class="bg-white rounded-2xl border transition shadow-xs overflow-hidden ${isExpanded ? 'border-[#073442] ring-2 ring-[#073442]/15 shadow-md' : 'border-slate-200/70 hover:border-slate-300'}">
+                        <!-- Cabeçalho do Card (Clicável para expandir/recolher inline) -->
+                        <div onclick="toggleHistoryOrderExpand(${order.id})" class="cursor-pointer p-4 flex items-center justify-between gap-3">
+                            <div class="min-w-0">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <span class="px-2 py-0.5 bg-[#073442] text-amber-300 text-[11px] font-black rounded-md">Pedido ${order.id}</span>
+                                    <span class="text-[11px] text-slate-400 font-medium">${order.date}</span>
+                                    ${hasDiscount ? `<span class="px-1.5 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold rounded">-${order.discountPercent}% desc.</span>` : ''}
+                                </div>
+                                <h4 class="font-extrabold text-slate-900 text-sm mt-1.5 truncate">${order.clientName}</h4>
+                                <p class="text-[11px] text-slate-500 mt-0.5">${order.items.length} item(ns) • ${order.paymentMethod}</p>
                             </div>
-                            <h4 class="font-extrabold text-slate-900 text-sm mt-1.5 truncate">${order.clientName}</h4>
-                            <p class="text-[11px] text-slate-500 mt-0.5">${order.items.length} item(ns) • ${order.paymentMethod}</p>
+                            <div class="text-right flex-shrink-0 flex items-center gap-3">
+                                <div>
+                                    <span class="text-base font-black text-emerald-700 block">${formatCurrency(order.total)}</span>
+                                    <span class="text-[10px] font-bold text-[#073442] underline">${isExpanded ? 'Ocultar detalhes' : 'Ver detalhes'}</span>
+                                </div>
+                                <i data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-4 h-4 text-slate-400"></i>
+                            </div>
                         </div>
-                        <div class="text-right flex-shrink-0">
-                            <span class="text-base font-black text-emerald-700 block">${formatCurrency(order.total)}</span>
-                            <span class="text-[10px] font-bold text-[#073442] underline">Ver detalhes</span>
-                        </div>
+
+                        <!-- Detalhes Expansíveis Inline (Sanfona Logo Abaixo) -->
+                        ${isExpanded ? `
+                            <div class="bg-slate-50/80 border-t border-slate-200/70 p-4 sm:p-5 space-y-4">
+                                <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-200/60">
+                                    <span class="text-xs font-bold text-slate-700">Itens Comprados neste Pedido:</span>
+                                    <div class="flex items-center gap-2">
+                                        <button onclick="openReceiptModal(${order.id})" class="px-3 py-1.5 bg-[#073442] hover:bg-[#0b4659] text-white rounded-xl text-xs font-extrabold shadow-xs transition flex items-center gap-1.5">
+                                            <i data-lucide="receipt" class="w-3.5 h-3.5 text-amber-400"></i>
+                                            Emitir Cupom
+                                        </button>
+                                        <button onclick="deleteHistoryOrder(${order.id})" class="px-3 py-1.5 bg-red-50 hover:bg-red-600 text-red-600 hover:text-white border border-red-200 rounded-xl text-xs font-bold transition flex items-center gap-1.5">
+                                            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+                                            Excluir e Estornar
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    ${order.items.map(it => `
+                                        <div class="flex items-center justify-between p-2.5 bg-white rounded-xl border border-slate-100 text-xs">
+                                            <div>
+                                                <span class="px-1.5 py-0.5 bg-[#073442] text-amber-300 text-[10px] font-black rounded mr-1.5">${it.code}</span>
+                                                <strong class="text-slate-800">${it.name}</strong>
+                                                <p class="text-[11px] text-slate-500 mt-0.5">
+                                                    ${it.units} un. x ${formatCurrency(it.unitPrice)}
+                                                    ${it.gradeNote ? `<span class="text-amber-700 font-semibold">(${it.gradeNote})</span>` : ''}
+                                                </p>
+                                            </div>
+                                            <span class="font-black text-slate-900">${formatCurrency(it.subtotal)}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+
+                                <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between bg-white p-3 rounded-xl text-xs">
+                                    ${hasDiscount ? `
+                                        <div class="text-slate-500">
+                                            Subtotal: <strong>${formatCurrency(order.subtotal)}</strong> | Desconto (${order.discountPercent}%): <strong class="text-amber-800">- ${formatCurrency(order.discountAmount)}</strong>
+                                        </div>
+                                    ` : '<span>Resumo Financeiro do Pedido</span>'}
+                                    <span class="font-black text-emerald-700 text-sm">Total: ${formatCurrency(order.total)}</span>
+                                </div>
+                            </div>
+                        ` : ''}
                     </div>
                 `;
             }).join('');
 
-            const selectedOrder = orderHistory.find(o => o.id === selectedHistoryOrderId);
-            if (!selectedOrder) {
-                detailEl.innerHTML = `
-                    <div class="text-center py-12 text-slate-400">
-                        <i data-lucide="file-text" class="w-12 h-12 mx-auto mb-3 opacity-35"></i>
-                        <h3 class="font-bold text-slate-600 text-sm">Selecione um pedido ao lado</h3>
-                        <p class="text-xs mt-1">Clique sobre o nome do cliente para ver todos os produtos lançados ou emitir o comprovante.</p>
-                    </div>
-                `;
-            } else {
-                const hasDiscount = (selectedOrder.discountAmount || 0) > 0;
-                detailEl.innerHTML = `
-                    <div class="space-y-4">
-                        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-slate-100">
-                            <div>
-                                <span class="px-2.5 py-0.5 bg-amber-100 text-amber-900 text-xs font-extrabold rounded-lg">Pedido ${selectedOrder.id}</span>
-                                <h3 class="text-lg font-black text-slate-900 mt-1.5">${selectedOrder.clientName}</h3>
-                                <p class="text-xs text-slate-500">${selectedOrder.date} • Pagamento: <strong>${selectedOrder.paymentMethod}</strong></p>
-                            </div>
-                            <div class="flex flex-wrap items-center gap-2">
-                                <button onclick="openReceiptModal(${selectedOrder.id})" class="px-3.5 py-2 bg-[#073442] hover:bg-[#0b4659] text-white rounded-xl text-xs font-extrabold shadow-xs transition flex items-center gap-1.5">
-                                    <i data-lucide="receipt" class="w-3.5 h-3.5 text-amber-400"></i>
-                                    Emitir Cupom
-                                </button>
-                                <button onclick="deleteHistoryOrder(${selectedOrder.id})" class="px-3.5 py-2 bg-red-50 hover:bg-red-600 text-red-600 hover:text-white border border-red-200 rounded-xl text-xs font-bold transition flex items-center gap-1.5">
-                                    <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
-                                    Excluir e Estornar
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="space-y-2 max-h-72 overflow-y-auto">
-                            ${selectedOrder.items.map(it => `
-                                <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
-                                    <div>
-                                        <span class="px-1.5 py-0.5 bg-[#073442] text-amber-300 text-[10px] font-black rounded mr-1.5">${it.code}</span>
-                                        <strong class="text-slate-800">${it.name}</strong>
-                                        <p class="text-[11px] text-slate-500 mt-0.5">
-                                            ${it.units} un. x ${formatCurrency(it.unitPrice)}
-                                            ${it.gradeNote ? `<span class="text-amber-700 font-semibold">(${it.gradeNote})</span>` : ''}
-                                        </p>
-                                    </div>
-                                    <span class="font-black text-slate-900">${formatCurrency(it.subtotal)}</span>
-                                </div>
-                            `).join('')}
-                        </div>
-
-                        <div class="pt-3 border-t border-slate-200 bg-slate-50 p-3.5 rounded-xl space-y-1.5">
-                            ${hasDiscount ? `
-                                <div class="flex items-center justify-between text-xs text-slate-500">
-                                    <span>Subtotal:</span>
-                                    <span>${formatCurrency(selectedOrder.subtotal)}</span>
-                                </div>
-                                <div class="flex items-center justify-between text-xs font-bold text-amber-800">
-                                    <span>Desconto (${selectedOrder.discountPercent}%):</span>
-                                    <span>- ${formatCurrency(selectedOrder.discountAmount)}</span>
-                                </div>
-                            ` : ''}
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-bold text-slate-600 uppercase">Total do Pedido</span>
-                                <span class="text-xl font-black text-emerald-700">${formatCurrency(selectedOrder.total)}</span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }
-
             lucide.createIcons();
         }
 
-        function selectHistoryOrder(orderId) {
-            selectedHistoryOrderId = orderId;
+        function toggleHistoryOrderExpand(orderId) {
+            if (selectedHistoryOrderId === orderId) {
+                selectedHistoryOrderId = null;
+            } else {
+                selectedHistoryOrderId = orderId;
+            }
             renderHistorico();
         }
 
-        // Abre o Modal de Comprovante / Cupom com o Logo da Distribuidora
         function openReceiptModal(orderId) {
             const order = orderHistory.find(o => o.id === orderId);
             if (!order) return;
@@ -2531,34 +2471,28 @@
 
             showConfirmModal(
                 'Excluir Pedido e Estornar Estoque',
-                `Deseja excluir o Pedido ${order.id} de "${order.clientName}" (${formatCurrency(order.total)})? Todos os produtos confirmados neste pedido retornarão automaticamente para o estoque.`,
+                `Deseja excluir o Pedido ${order.id} de "${order.clientName}" (${formatCurrency(order.total)})? Todos os produtos retornarão automaticamente para o estoque.`,
                 () => {
                     order.items.forEach(item => {
                         const prod = products.find(p => p.code === item.code);
-                        if (prod) {
-                            prod.qty += item.units;
-                        }
+                        if (prod) prod.qty += item.units;
                     });
 
                     totalSalesToday = Math.max(0, totalSalesToday - order.total);
                     orderHistory = orderHistory.filter(o => o.id !== orderId);
-                    if (selectedHistoryOrderId === orderId) {
-                        selectedHistoryOrderId = null;
-                    }
+                    if (selectedHistoryOrderId === orderId) selectedHistoryOrderId = null;
 
                     updateHeaderStats();
                     renderHistorico();
                     renderEstoque();
                     renderVitrine();
                     saveSystemState();
-                    showToast(`Pedido ${order.id} excluído e produtos estornados ao estoque!`, 'success');
+                    showToast(`Pedido ${order.id} excluído e produtos estornados!`, 'success');
                 }
             );
         }
 
-        // =========================================================================
-        // ABA 4: CLIENTES
-        // =========================================================================
+        // Clientes
         function addClient(e) {
             e.preventDefault();
             const name = document.getElementById('client-name').value.trim();
@@ -2568,14 +2502,7 @@
 
             if (!name || !phone || !address) return;
 
-            clients.push({
-                id: Date.now(),
-                name,
-                fantasy,
-                phone,
-                address
-            });
-
+            clients.push({ id: Date.now(), name, fantasy, phone, address });
             e.target.reset();
             renderClientes();
             saveSystemState();
@@ -2588,7 +2515,7 @@
 
             showConfirmModal(
                 'Remover Cliente',
-                `Deseja remover "${client.name}" da carteira de clientes?`,
+                `Deseja remover "${client.name}" da carteira?`,
                 () => {
                     clients = clients.filter(c => c.id !== id);
                     renderClientes();
@@ -2603,20 +2530,10 @@
             if (!tbody) return;
 
             const term = normalizeText(document.getElementById('clientes-search')?.value || '');
-            const filtered = clients.filter(c =>
-                normalizeText(c.name).includes(term) ||
-                (c.fantasy && normalizeText(c.fantasy).includes(term)) ||
-                normalizeText(c.phone).includes(term)
-            );
+            const filtered = clients.filter(c => normalizeText(c.name).includes(term) || (c.fantasy && normalizeText(c.fantasy).includes(term)));
 
             if (filtered.length === 0) {
-                tbody.innerHTML = `
-                    <tr>
-                        <td colspan="5" class="py-8 text-center text-slate-400 text-xs font-medium">
-                            Nenhum cliente cadastrado encontrado.
-                        </td>
-                    </tr>
-                `;
+                tbody.innerHTML = `<tr><td colspan="5" class="py-8 text-center text-slate-400 text-xs">Nenhum cliente encontrado.</td></tr>`;
                 return;
             }
 
@@ -2627,47 +2544,33 @@
                     <td class="py-3.5 px-4 text-slate-600 font-medium">${c.phone}</td>
                     <td class="py-3.5 px-4 text-slate-600">${c.address}</td>
                     <td class="py-3.5 px-4 text-center">
-                        <button onclick="deleteClient(${c.id})" class="p-2 text-red-500 hover:bg-red-50 rounded-xl transition" title="Excluir Cliente">
-                            <i data-lucide="trash-2" class="w-4 h-4"></i>
-                        </button>
+                        <button onclick="deleteClient(${c.id})" class="p-2 text-red-500 hover:bg-red-50 rounded-xl transition" title="Excluir"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
                     </td>
                 </tr>
             `).join('');
-
             lucide.createIcons();
         }
 
-        // =========================================================================
-        // ABA 5: ESTOQUE - CADASTRO, FOTO, CÁLCULOS E AJUSTE DE SALDO
-        // =========================================================================
+        // Estoque e Leitor de Notas por IA
         function handleProductPhotoSelect(event) {
             const file = event.target.files[0];
             if (!file) return;
-
             const reader = new FileReader();
             reader.onload = (e) => {
                 const img = new Image();
                 img.onload = () => {
                     const canvas = document.createElement('canvas');
                     const maxDim = 240;
-                    let w = img.width;
-                    let h = img.height;
+                    let w = img.width, h = img.height;
                     if (w > maxDim || h > maxDim) {
-                        if (w > h) {
-                            h = Math.round((h * maxDim) / w);
-                            w = maxDim;
-                        } else {
-                            w = Math.round((w * maxDim) / h);
-                            h = maxDim;
-                        }
+                        if (w > h) { h = Math.round((h * maxDim) / w); w = maxDim; }
+                        else { w = Math.round((w * maxDim) / h); h = maxDim; }
                     }
-                    canvas.width = w;
-                    canvas.height = h;
+                    canvas.width = w; canvas.height = h;
                     const ctx = canvas.getContext('2d');
                     ctx.drawImage(img, 0, 0, w, h);
                     pendingProductPhotoData = canvas.toDataURL('image/jpeg', 0.82);
-
-                    document.getElementById('prod-photo-preview-box').innerHTML = `<img src="${pendingProductPhotoData}" alt="Prévia" class="w-full h-full object-cover">`;
+                    document.getElementById('prod-photo-preview-box').innerHTML = `<img src="${pendingProductPhotoData}" class="w-full h-full object-cover">`;
                     document.getElementById('prod-photo-label').textContent = file.name;
                 };
                 img.src = e.target.result;
@@ -2687,7 +2590,6 @@
         function recalcFromPurchaseOrCost() {
             const badge = document.getElementById('cost-percent-badge');
             if (badge) badge.textContent = `+${costOverheadPercent}% Custo`;
-
             const purchase = parseFloat(document.getElementById('prod-purchase')?.value) || 0;
             const calculatedCost = calculateProductCost(purchase);
             const costReadonly = document.getElementById('prod-cost-readonly');
@@ -2696,9 +2598,7 @@
             const profitPct = parseFloat(document.getElementById('prod-profit-percent')?.value) || 0;
             const salePrice = calculatedCost * (1 + profitPct / 100);
             const saleInput = document.getElementById('prod-sale-price');
-            if (saleInput && purchase > 0) {
-                saleInput.value = salePrice.toFixed(2);
-            }
+            if (saleInput && purchase > 0) saleInput.value = salePrice.toFixed(2);
             updatePreviews(salePrice);
         }
 
@@ -2706,12 +2606,9 @@
             const purchase = parseFloat(document.getElementById('prod-purchase')?.value) || 0;
             const calculatedCost = calculateProductCost(purchase);
             const profitPct = parseFloat(document.getElementById('prod-profit-percent')?.value) || 0;
-
             const salePrice = calculatedCost * (1 + profitPct / 100);
             const saleInput = document.getElementById('prod-sale-price');
-            if (saleInput && calculatedCost > 0) {
-                saleInput.value = salePrice.toFixed(2);
-            }
+            if (saleInput && calculatedCost > 0) saleInput.value = salePrice.toFixed(2);
             updatePreviews(salePrice);
         }
 
@@ -2719,7 +2616,6 @@
             const purchase = parseFloat(document.getElementById('prod-purchase')?.value) || 0;
             const calculatedCost = calculateProductCost(purchase);
             const salePrice = parseFloat(document.getElementById('prod-sale-price')?.value) || 0;
-
             if (calculatedCost > 0) {
                 const newProfitPct = ((salePrice / calculatedCost) - 1) * 100;
                 document.getElementById('prod-profit-percent').value = newProfitPct.toFixed(2);
@@ -2738,7 +2634,7 @@
 
             if (!name || isNaN(qty) || isNaN(purchasePrice) || isNaN(profitPercent)) return;
 
-            const newProd = {
+            products.push({
                 code: nextSequenceCode++,
                 name,
                 category,
@@ -2747,9 +2643,8 @@
                 purchasePrice,
                 profitPercent,
                 image: pendingProductPhotoData
-            };
+            });
 
-            products.push(newProd);
             e.target.reset();
             pendingProductPhotoData = null;
             document.getElementById('prod-photo-preview-box').innerHTML = `<i data-lucide="image" class="w-5 h-5"></i>`;
@@ -2763,7 +2658,7 @@
             renderEstoque();
             renderVitrine();
             saveSystemState();
-            showToast(`Produto "${newProd.name}" cadastrado com código ${newProd.code}!`, 'success');
+            showToast(`Produto "${name}" cadastrado com sucesso!`, 'success');
         }
 
         function adjustStockQty(code, delta) {
@@ -2775,18 +2670,12 @@
             saveSystemState();
         }
 
-        // =========================================================================
-        // EDIÇÃO RÁPIDA MULTIPLATAFORMA DO PREÇO DE VENDA NA LISTAGEM DO ESTOQUE
-        // =========================================================================
         function startInlinePriceEdit(code) {
             inlineEditingPriceCode = code;
             renderEstoque();
             setTimeout(() => {
                 const input = document.getElementById(`inline-price-input-${code}`);
-                if (input) {
-                    input.focus();
-                    input.select();
-                }
+                if (input) { input.focus(); input.select(); }
             }, 30);
         }
 
@@ -2798,47 +2687,32 @@
         function saveInlinePriceEdit(code) {
             const input = document.getElementById(`inline-price-input-${code}`);
             if (!input) return;
-
-            const normalizedVal = String(input.value).replace(',', '.');
-            const newSalePrice = parseFloat(normalizedVal);
+            const newSalePrice = parseFloat(String(input.value).replace(',', '.'));
             if (isNaN(newSalePrice) || newSalePrice <= 0) {
-                showToast('Informe um preço de venda válido maior que zero.', 'error');
+                showToast('Informe um preço válido.', 'error');
                 return;
             }
-
             const prod = products.find(p => p.code === code);
             if (!prod) return;
-
             const calculatedCost = calculateProductCost(prod.purchasePrice);
-            if (calculatedCost > 0) {
-                prod.profitPercent = ((newSalePrice / calculatedCost) - 1) * 100;
-            }
+            if (calculatedCost > 0) prod.profitPercent = ((newSalePrice / calculatedCost) - 1) * 100;
 
             inlineEditingPriceCode = null;
             renderEstoque();
             renderVitrine();
             renderCart();
             saveSystemState();
-            showToast(`Preço de venda de "${prod.name}" atualizado para ${formatCurrency(newSalePrice)}!`, 'success');
+            showToast(`Preço de "${prod.name}" atualizado!`, 'success');
         }
 
         function handleInlinePriceKeydown(event, code) {
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                saveInlinePriceEdit(code);
-            } else if (event.key === 'Escape') {
-                event.preventDefault();
-                cancelInlinePriceEdit();
-            }
+            if (event.key === 'Enter') { event.preventDefault(); saveInlinePriceEdit(code); }
+            else if (event.key === 'Escape') { event.preventDefault(); cancelInlinePriceEdit(); }
         }
 
-        // =========================================================================
-        // EDIÇÃO COMPLETA DE PRODUTO (MODAL)
-        // =========================================================================
         function openEditProductModal(code) {
             const prod = products.find(p => p.code === code);
             if (!prod) return;
-
             const calculatedCost = calculateProductCost(prod.purchasePrice);
             const finalSale = calculateFinalPrice(prod);
 
@@ -2862,7 +2736,7 @@
             document.getElementById('edit-prod-photo-label').textContent = editProductPhotoData ? 'Trocar foto...' : 'Escolher foto...';
 
             if (editProductPhotoData) {
-                previewBox.innerHTML = `<img src="${editProductPhotoData}" alt="Foto" class="w-full h-full object-cover">`;
+                previewBox.innerHTML = `<img src="${editProductPhotoData}" class="w-full h-full object-cover">`;
                 removeBtn.classList.remove('hidden');
             } else {
                 previewBox.innerHTML = `<i data-lucide="image" class="w-5 h-5"></i>`;
@@ -2885,31 +2759,22 @@
         function handleEditProductPhotoSelect(event) {
             const file = event.target.files[0];
             if (!file) return;
-
             const reader = new FileReader();
             reader.onload = (e) => {
                 const img = new Image();
                 img.onload = () => {
                     const canvas = document.createElement('canvas');
                     const maxDim = 240;
-                    let w = img.width;
-                    let h = img.height;
+                    let w = img.width, h = img.height;
                     if (w > maxDim || h > maxDim) {
-                        if (w > h) {
-                            h = Math.round((h * maxDim) / w);
-                            w = maxDim;
-                        } else {
-                            w = Math.round((w * maxDim) / h);
-                            h = maxDim;
-                        }
+                        if (w > h) { h = Math.round((h * maxDim) / w); w = maxDim; }
+                        else { w = Math.round((w * maxDim) / h); h = maxDim; }
                     }
-                    canvas.width = w;
-                    canvas.height = h;
+                    canvas.width = w; canvas.height = h;
                     const ctx = canvas.getContext('2d');
                     ctx.drawImage(img, 0, 0, w, h);
                     editProductPhotoData = canvas.toDataURL('image/jpeg', 0.82);
-
-                    document.getElementById('edit-prod-photo-preview').innerHTML = `<img src="${editProductPhotoData}" alt="Prévia" class="w-full h-full object-cover">`;
+                    document.getElementById('edit-prod-photo-preview').innerHTML = `<img src="${editProductPhotoData}" class="w-full h-full object-cover">`;
                     document.getElementById('edit-prod-photo-label').textContent = file.name;
                     document.getElementById('edit-remove-photo-btn').classList.remove('hidden');
                 };
@@ -2937,12 +2802,9 @@
             const purchase = parseFloat(document.getElementById('edit-prod-purchase').value) || 0;
             const calculatedCost = calculateProductCost(purchase);
             document.getElementById('edit-prod-cost-readonly').value = formatCurrency(calculatedCost);
-
             const profitPct = parseFloat(document.getElementById('edit-prod-profit-percent').value) || 0;
             const salePrice = calculatedCost * (1 + profitPct / 100);
-            if (purchase > 0) {
-                document.getElementById('edit-prod-sale-price').value = salePrice.toFixed(2);
-            }
+            if (purchase > 0) document.getElementById('edit-prod-sale-price').value = salePrice.toFixed(2);
             updateEditGradePreview(salePrice);
         }
 
@@ -2950,11 +2812,8 @@
             const purchase = parseFloat(document.getElementById('edit-prod-purchase').value) || 0;
             const calculatedCost = calculateProductCost(purchase);
             const profitPct = parseFloat(document.getElementById('edit-prod-profit-percent').value) || 0;
-
             const salePrice = calculatedCost * (1 + profitPct / 100);
-            if (calculatedCost > 0) {
-                document.getElementById('edit-prod-sale-price').value = salePrice.toFixed(2);
-            }
+            if (calculatedCost > 0) document.getElementById('edit-prod-sale-price').value = salePrice.toFixed(2);
             updateEditGradePreview(salePrice);
         }
 
@@ -2962,7 +2821,6 @@
             const purchase = parseFloat(document.getElementById('edit-prod-purchase').value) || 0;
             const calculatedCost = calculateProductCost(purchase);
             const salePrice = parseFloat(document.getElementById('edit-prod-sale-price').value) || 0;
-
             if (calculatedCost > 0) {
                 const newProfitPct = ((salePrice / calculatedCost) - 1) * 100;
                 document.getElementById('edit-prod-profit-percent').value = newProfitPct.toFixed(2);
@@ -2976,43 +2834,31 @@
             const prod = products.find(p => p.code === code);
             if (!prod) return;
 
-            const name = document.getElementById('edit-prod-name').value.trim();
-            const category = document.getElementById('edit-prod-category').value;
-            const qty = parseInt(document.getElementById('edit-prod-qty').value, 10);
-            const masterQty = parseInt(document.getElementById('edit-prod-master-qty').value, 10) || 1;
-            const purchasePrice = parseFloat(document.getElementById('edit-prod-purchase').value);
-            const profitPercent = parseFloat(document.getElementById('edit-prod-profit-percent').value);
-
-            if (!name || isNaN(qty) || isNaN(purchasePrice) || isNaN(profitPercent)) return;
-
-            prod.name = name;
-            prod.category = category;
-            prod.qty = Math.max(0, qty);
-            prod.masterQty = masterQty;
-            prod.purchasePrice = purchasePrice;
-            prod.profitPercent = profitPercent;
+            prod.name = document.getElementById('edit-prod-name').value.trim();
+            prod.category = document.getElementById('edit-prod-category').value;
+            prod.qty = Math.max(0, parseInt(document.getElementById('edit-prod-qty').value, 10));
+            prod.masterQty = parseInt(document.getElementById('edit-prod-master-qty').value, 10) || 1;
+            prod.purchasePrice = parseFloat(document.getElementById('edit-prod-purchase').value);
+            prod.profitPercent = parseFloat(document.getElementById('edit-prod-profit-percent').value);
             prod.image = editProductPhotoData;
 
             const cartItem = cart.find(item => item.code === code);
-            if (cartItem) {
-                cartItem.name = name;
-            }
+            if (cartItem) cartItem.name = prod.name;
 
             closeEditProductModal();
             renderEstoque();
             renderVitrine();
             renderCart();
             saveSystemState();
-            showToast(`Produto Cód. ${code} ("${name}") atualizado com sucesso!`, 'success');
+            showToast(`Produto Cód. ${code} atualizado!`, 'success');
         }
 
         function deleteProduct(code) {
             const prod = products.find(p => p.code === code);
             if (!prod) return;
-
             showConfirmModal(
                 'Excluir Produto',
-                `Deseja remover "${prod.name}" (Código Fixo ${prod.code}) do estoque? Os códigos dos demais produtos permanecerão inalterados.`,
+                `Deseja remover "${prod.name}" do estoque?`,
                 () => {
                     products = products.filter(p => p.code !== code);
                     cart = cart.filter(item => item.code !== code);
@@ -3021,7 +2867,7 @@
                     renderEstoque();
                     renderVitrine();
                     saveSystemState();
-                    showToast(`Produto ${code} removido.`, 'info');
+                    showToast('Produto removido.', 'info');
                 }
             );
         }
@@ -3029,88 +2875,44 @@
         function renderEstoque() {
             const tbody = document.getElementById('estoque-table-body');
             const term = normalizeText(document.getElementById('estoque-search').value);
-
-            const filtered = products.filter(p => 
-                normalizeText(p.name).includes(term) || String(p.code) === term
-            );
+            const filtered = products.filter(p => normalizeText(p.name).includes(term) || String(p.code) === term);
 
             if (filtered.length === 0) {
-                tbody.innerHTML = `
-                    <tr>
-                        <td colspan="9" class="py-8 text-center text-slate-400 text-xs font-medium">
-                            Nenhum produto encontrado no estoque.
-                        </td>
-                    </tr>
-                `;
+                tbody.innerHTML = `<tr><td colspan="9" class="py-8 text-center text-slate-400 text-xs">Nenhum produto encontrado.</td></tr>`;
                 return;
             }
 
             tbody.innerHTML = filtered.map(p => {
                 const calculatedCost = calculateProductCost(p.purchasePrice);
                 const finalPrice = calculateFinalPrice(p);
-                const lowBadge = p.qty <= 10 
-                    ? `<span class="ml-1.5 px-1.5 py-0.5 text-[10px] font-bold bg-red-100 text-red-700 rounded">Baixo</span>` 
-                    : '';
-
-                const thumbHtml = p.image
-                    ? `<img src="${p.image}" alt="${p.name}" class="w-10 h-10 rounded-xl object-cover border border-slate-200 flex-shrink-0 bg-white">`
-                    : `<div class="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200/80 flex items-center justify-center text-slate-400 flex-shrink-0">
-                           <i data-lucide="image" class="w-4 h-4"></i>
-                       </div>`;
+                const lowBadge = p.qty <= 10 ? `<span class="ml-1.5 px-1.5 py-0.5 text-[10px] font-bold bg-red-100 text-red-700 rounded">Baixo</span>` : '';
+                const thumbHtml = p.image ? `<img src="${p.image}" class="w-10 h-10 rounded-xl object-cover border border-slate-200 flex-shrink-0 bg-white">` : `<div class="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200/80 flex items-center justify-center text-slate-400 flex-shrink-0"><i data-lucide="image" class="w-4 h-4"></i></div>`;
 
                 const isInlineEditing = inlineEditingPriceCode === p.code;
-                const salePriceCellHtml = isInlineEditing
-                    ? `
-                        <div class="inline-flex flex-col items-end gap-1.5 bg-emerald-50/90 p-2 rounded-2xl border border-emerald-300 shadow-sm">
-                            <div class="flex items-center gap-1">
-                                <span class="text-[11px] font-extrabold text-emerald-800">R$</span>
-                                <input type="number" inputmode="decimal" id="inline-price-input-${p.code}" step="0.01" min="0.01" value="${finalPrice.toFixed(2)}" onkeydown="handleInlinePriceKeydown(event, ${p.code})" class="w-24 px-2.5 py-1.5 text-right bg-white border border-emerald-400 rounded-xl text-sm font-black text-emerald-950 focus:outline-none focus:ring-2 focus:ring-emerald-600">
-                            </div>
-                            <div class="flex items-center gap-1.5 w-full">
-                                <button type="button" onclick="cancelInlinePriceEdit()" class="flex-1 py-1.5 px-2.5 bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1">
-                                    <i data-lucide="x" class="w-3.5 h-3.5"></i>
-                                    Sair
-                                </button>
-                                <button type="button" onclick="saveInlinePriceEdit(${p.code})" class="flex-1 py-1.5 px-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-[11px] font-extrabold shadow-xs transition flex items-center justify-center gap-1">
-                                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
-                                    Salvar
-                                </button>
-                            </div>
+                const salePriceCellHtml = isInlineEditing ? `
+                    <div class="inline-flex flex-col items-end gap-1.5 bg-emerald-50/90 p-2 rounded-2xl border border-emerald-300 shadow-sm">
+                        <div class="flex items-center gap-1">
+                            <span class="text-[11px] font-extrabold text-emerald-800">R$</span>
+                            <input type="number" inputmode="decimal" id="inline-price-input-${p.code}" step="0.01" min="0.01" value="${finalPrice.toFixed(2)}" onkeydown="handleInlinePriceKeydown(event, ${p.code})" class="w-24 px-2.5 py-1.5 text-right bg-white border border-emerald-400 rounded-xl text-sm font-black text-emerald-950 focus:outline-none focus:ring-2 focus:ring-emerald-600">
                         </div>
-                    `
-                    : `
-                        <button type="button" onclick="startInlinePriceEdit(${p.code})" class="group/price inline-flex flex-col items-end cursor-pointer px-2.5 py-1.5 -my-1 rounded-xl bg-emerald-50/40 hover:bg-emerald-50 active:bg-emerald-100 border border-emerald-200/60 hover:border-emerald-300 transition text-right" title="Toque para alterar o preço de venda">
-                            <span class="font-black text-emerald-700 flex items-center gap-1.5">
-                                ${formatCurrency(finalPrice)}
-                                <i data-lucide="pencil" class="w-3 h-3 text-emerald-600 opacity-75 group-hover/price:opacity-100 transition"></i>
-                            </span>
-                            <span class="text-[10px] font-bold text-emerald-600/80">+${Number(p.profitPercent).toFixed(0)}% lucro</span>
-                        </button>
-                    `;
+                        <div class="flex items-center gap-1.5 w-full">
+                            <button type="button" onclick="cancelInlinePriceEdit()" class="flex-1 py-1.5 px-2.5 bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 rounded-xl text-[11px] font-bold transition flex items-center justify-center gap-1"><i data-lucide="x" class="w-3.5 h-3.5"></i> Sair</button>
+                            <button type="button" onclick="saveInlinePriceEdit(${p.code})" class="flex-1 py-1.5 px-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-[11px] font-extrabold shadow-xs transition flex items-center justify-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5"></i> Salvar</button>
+                        </div>
+                    </div>
+                ` : `
+                    <button type="button" onclick="startInlinePriceEdit(${p.code})" class="group/price inline-flex flex-col items-end cursor-pointer px-2.5 py-1.5 -my-1 rounded-xl bg-emerald-50/40 hover:bg-emerald-50 active:bg-emerald-100 border border-emerald-200/60 hover:border-emerald-300 transition text-right" title="Toque para alterar o preço de venda">
+                        <span class="font-black text-emerald-700 flex items-center gap-1.5">${formatCurrency(finalPrice)} <i data-lucide="pencil" class="w-3 h-3 text-emerald-600 opacity-75 group-hover/price:opacity-100 transition"></i></span>
+                        <span class="text-[10px] font-bold text-emerald-600/80">+${Number(p.profitPercent).toFixed(0)}% lucro</span>
+                    </button>
+                `;
 
                 return `
                     <tr class="hover:bg-slate-50/80 transition">
-                        <td class="py-3.5 px-4">
-                            <span class="inline-flex items-center justify-center px-2.5 py-1 bg-[#073442] text-amber-300 font-black text-xs rounded-lg shadow-xs">
-                                ${p.code}
-                            </span>
-                        </td>
-                        <td class="py-3.5 px-4">
-                            <div class="flex items-center gap-3">
-                                ${thumbHtml}
-                                <span class="font-bold text-slate-800">${p.name}</span>
-                            </div>
-                        </td>
-                        <td class="py-3.5 px-4">
-                            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">
-                                ${p.category}
-                            </span>
-                        </td>
-                        <td class="py-3.5 px-4 text-center">
-                            <span class="px-2 py-0.5 bg-amber-50 border border-amber-200 text-amber-900 rounded-md text-xs font-bold">
-                                ${p.masterQty} un.
-                            </span>
-                        </td>
+                        <td class="py-3.5 px-4"><span class="inline-flex items-center justify-center px-2.5 py-1 bg-[#073442] text-amber-300 font-black text-xs rounded-lg shadow-xs">${p.code}</span></td>
+                        <td class="py-3.5 px-4"><div class="flex items-center gap-3">${thumbHtml}<span class="font-bold text-slate-800">${p.name}</span></div></td>
+                        <td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">${p.category}</span></td>
+                        <td class="py-3.5 px-4 text-center"><span class="px-2 py-0.5 bg-amber-50 border border-amber-200 text-amber-900 rounded-md text-xs font-bold">${p.masterQty} un.</span></td>
                         <td class="py-3.5 px-4">
                             <div class="flex items-center justify-center gap-2">
                                 <button onclick="adjustStockQty(${p.code}, -1)" class="w-6 h-6 rounded-md bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold flex items-center justify-center text-xs">-</button>
@@ -3119,29 +2921,18 @@
                                 ${lowBadge}
                             </div>
                         </td>
-                        <td class="py-3.5 px-4 text-right font-medium text-slate-500">
-                            ${formatCurrency(p.purchasePrice)}
-                        </td>
-                        <td class="py-3.5 px-4 text-right font-semibold text-slate-700" title="Compra + ${costOverheadPercent}% de custo">
-                            ${formatCurrency(calculatedCost)}
-                        </td>
-                        <td class="py-3.5 px-4 text-right">
-                            ${salePriceCellHtml}
-                        </td>
+                        <td class="py-3.5 px-4 text-right font-medium text-slate-500">${formatCurrency(p.purchasePrice)}</td>
+                        <td class="py-3.5 px-4 text-right font-semibold text-slate-700">${formatCurrency(calculatedCost)}</td>
+                        <td class="py-3.5 px-4 text-right">${salePriceCellHtml}</td>
                         <td class="py-3.5 px-4 text-center">
                             <div class="inline-flex items-center justify-center gap-1">
-                                <button onclick="openEditProductModal(${p.code})" class="p-2 text-[#073442] hover:bg-slate-200/70 rounded-xl transition" title="Editar Cadastro Completo">
-                                    <i data-lucide="edit-3" class="w-4 h-4"></i>
-                                </button>
-                                <button onclick="deleteProduct(${p.code})" class="p-2 text-red-500 hover:bg-red-50 rounded-xl transition" title="Excluir Produto">
-                                    <i data-lucide="trash-2" class="w-4 h-4"></i>
-                                </button>
+                                <button onclick="openEditProductModal(${p.code})" class="p-2 text-[#073442] hover:bg-slate-200/70 rounded-xl transition" title="Editar"><i data-lucide="edit-3" class="w-4 h-4"></i></button>
+                                <button onclick="deleteProduct(${p.code})" class="p-2 text-red-500 hover:bg-red-50 rounded-xl transition" title="Excluir"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
                             </div>
                         </td>
                     </tr>
                 `;
             }).join('');
-
             lucide.createIcons();
         }
 
@@ -3323,32 +3114,42 @@
             showToast(`Nota importada! ${updatedCount} item(ns) somado(s) e ${createdCount} novo(s) cadastrado(s).`, 'success');
         }
 
-        // =========================================================================
-        // ABA CONFIGURAÇÃO (MODERADOR: 544111, MARGEM, ABAS E COR DO BANNER)
-        // =========================================================================
+        // Configuração, Atualizações do App & Moderador
+        function toggleUpdatesPanel() {
+            const panel = document.getElementById('app-updates-panel');
+            const label = document.getElementById('toggle-updates-btn-label');
+            if (!panel) return;
+
+            const isHidden = panel.classList.contains('hidden');
+            if (isHidden) {
+                panel.classList.remove('hidden');
+                if (label) label.textContent = 'Ocultar Atualizações';
+            } else {
+                panel.classList.add('hidden');
+                if (label) label.textContent = 'Ver Atualizações do App';
+            }
+            lucide.createIcons();
+        }
+
         function handleModeratorLogin(e) {
             e.preventDefault();
             const input = document.getElementById('mod-password-input');
             const code = input.value.trim();
-
             if (code === MODERATOR_CODE) {
                 isModeratorAuthenticated = true;
                 input.value = '';
                 document.getElementById('moderator-login-card').classList.add('hidden');
                 document.getElementById('moderator-panel').classList.remove('hidden');
-                
                 const dot = document.getElementById('mod-status-dot');
                 dot.classList.remove('bg-slate-300');
                 dot.classList.add('bg-emerald-500');
-                dot.title = 'Moderador Ativo';
-
                 applyTabVisibility();
                 renderTabVisibilityControls();
-                showToast('Acesso de moderador liberado com sucesso!', 'success');
+                showToast('Painel do moderador desbloqueado!', 'success');
             } else {
                 input.value = '';
                 input.focus();
-                showToast('Código de acesso incorreto! Tente novamente.', 'error');
+                showToast('Código incorreto!', 'error');
             }
         }
 
@@ -3356,143 +3157,74 @@
             isModeratorAuthenticated = false;
             document.getElementById('moderator-panel').classList.add('hidden');
             document.getElementById('moderator-login-card').classList.remove('hidden');
-
             const dot = document.getElementById('mod-status-dot');
             dot.classList.remove('bg-emerald-500');
             dot.classList.add('bg-slate-300');
-            dot.title = 'Moderador Bloqueado';
-
             applyTabVisibility();
-            showToast('Acesso do moderador bloqueado.', 'info');
+            showToast('Painel bloqueado.', 'info');
         }
 
         function updateProfitMargin(e) {
             e.preventDefault();
             if (!isModeratorAuthenticated) return;
-
             const newCostPercent = parseFloat(document.getElementById('margin-input').value);
-            if (isNaN(newCostPercent) || newCostPercent < 0) {
-                showToast('Insira uma porcentagem válida.', 'error');
-                return;
-            }
-
+            if (isNaN(newCostPercent) || newCostPercent < 0) return;
             costOverheadPercent = newCostPercent;
             document.getElementById('current-margin-display').textContent = `${costOverheadPercent}%`;
-            
             recalcFromPurchaseOrCost();
             renderEstoque();
             renderVitrine();
             renderCart();
             saveSystemState();
-
-            showToast(`Porcentagem de custo atualizada para ${costOverheadPercent}%!`, 'success');
+            showToast(`Custo operacional atualizado para ${costOverheadPercent}%!`, 'success');
         }
 
         function applyBannerTheme(startColor, endColor, titleColor, subtitleColor) {
             if (!isModeratorAuthenticated) return;
-
             bannerThemeState = { startColor, endColor, titleColor, subtitleColor };
             renderBannerAppearance();
             saveSystemState();
-
             showToast('Cores do banner atualizadas!', 'success');
         }
 
         function applyCustomBannerColors() {
             if (!isModeratorAuthenticated) return;
-
             const startColor = document.getElementById('banner-color-start').value;
             const endColor = document.getElementById('banner-color-end').value;
-
-            bannerThemeState = {
-                startColor,
-                endColor,
-                titleColor: '#0f172a',
-                subtitleColor: '#334155'
-            };
+            bannerThemeState = { startColor, endColor, titleColor: '#0f172a', subtitleColor: '#334155' };
             renderBannerAppearance();
             saveSystemState();
         }
 
-        // =========================================================================
-        // BACKUP GERAL E RESTAURAÇÃO DO SISTEMA (.JSON)
-        // =========================================================================
         function exportSystemBackup() {
             if (!isModeratorAuthenticated) return;
-            try {
-                const backupPayload = {
-                    app: "Distribuidora de Bebidas do Elinilson",
-                    version: 1,
-                    exportedAt: new Date().toISOString(),
-                    costOverheadPercent,
-                    nextSequenceCode,
-                    nextOrderNumber,
-                    totalSalesToday,
-                    bannerThemeState,
-                    tabVisibility,
-                    products,
-                    clients,
-                    orderHistory,
-                    cart
-                };
-
-                const jsonStr = JSON.stringify(backupPayload, null, 2);
-                const blob = new Blob([jsonStr], { type: 'application/json' });
-                const url = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                const dateStamp = new Date().toISOString().slice(0, 10);
-                link.href = url;
-                link.download = `backup-distribuidora-elinilson-${dateStamp}.json`;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                URL.revokeObjectURL(url);
-
-                showToast('Backup geral baixado com sucesso!', 'success');
-            } catch (err) {
-                showToast('Erro ao gerar o arquivo de backup.', 'error');
-            }
+            const backupPayload = { version: 1, exportedAt: new Date().toISOString(), costOverheadPercent, nextSequenceCode, nextOrderNumber, totalSalesToday, bannerThemeState, tabVisibility, products, clients, orderHistory, cart };
+            const blob = new Blob([JSON.stringify(backupPayload, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `backup-distribuidora-${new Date().toISOString().slice(0, 10)}.json`;
+            document.body.appendChild(link); link.click(); document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+            showToast('Backup exportado com sucesso!', 'success');
         }
 
         function importSystemBackup(event) {
             if (!isModeratorAuthenticated) return;
             const file = event.target.files[0];
             if (!file) return;
-
             const reader = new FileReader();
             reader.onload = (e) => {
                 try {
                     const parsed = JSON.parse(e.target.result);
-                    if (!parsed || !Array.isArray(parsed.products)) {
-                        throw new Error('Formato de backup inválido.');
-                    }
-
-                    showConfirmModal(
-                        'Restaurar Backup Geral',
-                        'Esta ação substituirá os produtos, clientes, pedidos e configurações atuais pelos dados do arquivo selecionado. Deseja continuar?',
-                        () => {
-                            applyLoadedDataObject(parsed);
-                            saveSystemState();
-
-                            document.getElementById('current-margin-display').textContent = `${costOverheadPercent}%`;
-                            document.getElementById('margin-input').value = costOverheadPercent;
-                            document.getElementById('cost-percent-badge').textContent = `+${costOverheadPercent}% Custo`;
-
-                            applyTabVisibility();
-                            renderTabVisibilityControls();
-                            updateCartBadge();
-                            updateHeaderStats();
-                            renderVitrine();
-                            renderEstoque();
-                            renderClientes();
-                            renderHistorico();
-                            renderCart();
-
-                            showToast('Backup geral restaurado com sucesso!', 'success');
-                        }
-                    );
-                } catch (err) {
-                    showToast('Arquivo de backup inválido ou corrompido.', 'error');
+                    if (!parsed || !Array.isArray(parsed.products)) throw new Error();
+                    showConfirmModal('Restaurar Backup', 'Deseja substituir os dados atuais?', () => {
+                        applyLoadedDataObject(parsed);
+                        saveSystemState();
+                        location.reload();
+                    });
+                } catch {
+                    showToast('Arquivo de backup inválido.', 'error');
                 } finally {
                     event.target.value = '';
                 }
@@ -3502,25 +3234,21 @@
 
         function resetSystemToDefault() {
             if (!isModeratorAuthenticated) return;
-            showConfirmModal(
-                'Resetar Sistema para Padrão',
-                'Atenção: isso apagará todos os produtos cadastrados, clientes, histórico de pedidos e alterações salvas neste aparelho. Deseja realmente zerar tudo?',
-                () => {
-                    localStorage.removeItem(STORAGE_KEY);
-                    location.reload();
-                }
-            );
+            showConfirmModal('Resetar Sistema', 'Deseja apagar todos os dados e restaurar o padrão?', () => {
+                localStorage.removeItem(STORAGE_KEY);
+                location.reload();
+            });
         }
 
-        // =========================================================================
-        // INICIALIZAÇÃO
-        // =========================================================================
         window.addEventListener('DOMContentLoaded', () => {
             loadSystemState();
             lucide.createIcons();
-            document.getElementById('cost-percent-badge').textContent = `+${costOverheadPercent}% Custo`;
-            document.getElementById('current-margin-display').textContent = `${costOverheadPercent}%`;
-            document.getElementById('margin-input').value = costOverheadPercent;
+            const badge = document.getElementById('cost-percent-badge');
+            if (badge) badge.textContent = `+${costOverheadPercent}% Custo`;
+            const marginDisp = document.getElementById('current-margin-display');
+            if (marginDisp) marginDisp.textContent = `${costOverheadPercent}%`;
+            const marginInp = document.getElementById('margin-input');
+            if (marginInp) marginInp.value = costOverheadPercent;
             applyTabVisibility();
             updateCartBadge();
             updateHeaderStats();
