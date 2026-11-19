@@ -91,6 +91,9 @@
 </head>
 <body class="text-slate-800 min-h-screen flex flex-col">
 
+    <!-- CANVAS INVISÍVEL PARA GERAÇÃO DO ÍCONE OFICIAL DO PWA (192x192 e 512x512) -->
+    <canvas id="pwa-icon-canvas" class="hidden" aria-hidden="true"></canvas>
+
     <!-- NOTIFICAÇÃO TOAST CUSTOMIZADA (Substitui alert()) -->
     <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none no-print"></div>
 
@@ -3695,12 +3698,13 @@
         }
 
         // =========================================================================
-        // PWA & ÍCONE DE TELA INICIAL NO CELULAR (GERADO A PARTIR DA LOGO OFICIAL)
+        // PWA & ÍCONE DE TELA INICIAL NO CELULAR (GERADO VIA <canvas id="pwa-icon-canvas">)
         // =========================================================================
         function initMobileAppIconAndManifest() {
             try {
                 const logoSvg = document.getElementById('brand-logo-svg');
-                if (!logoSvg) return;
+                const canvas = document.getElementById('pwa-icon-canvas') || document.createElement('canvas');
+                if (!logoSvg || !canvas) return;
 
                 // Clona a logo oficial vetorial garantindo dimensões explícitas para renderização em alta definição
                 const clonedSvg = logoSvg.cloneNode(true);
@@ -3712,10 +3716,10 @@
                 const img = new Image();
                 img.onload = () => {
                     const renderIconPng = (size) => {
-                        const canvas = document.createElement('canvas');
                         canvas.width = size;
                         canvas.height = size;
                         const ctx = canvas.getContext('2d');
+                        ctx.clearRect(0, 0, size, size);
 
                         // Fundo institucional com bordas suaves para encaixe perfeito no ícone do Android/iOS
                         ctx.fillStyle = '#073442';
@@ -3788,9 +3792,7 @@
                         const swCode = `
                             self.addEventListener('install', (e) => self.skipWaiting());
                             self.addEventListener('activate', (e) => e.waitUntil(self.clients.claim()));
-                            self.addEventListener('fetch', (e) => {
-                                e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
-                            });
+                            self.addEventListener('fetch', (e) => {});
                         `;
                         const swBlob = new Blob([swCode], { type: 'application/javascript' });
                         const swUrl = URL.createObjectURL(swBlob);
@@ -3799,26 +3801,29 @@
                 };
                 img.src = svgDataUrl;
             } catch (err) {
-                console.warn('Aviso ao configurar ícone mobile:', err);
+                console.warn('Não foi possível inicializar o ícone de tela inicial:', err);
             }
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             loadSystemState();
-            const marginInput = document.getElementById('margin-input');
             const marginDisp = document.getElementById('current-margin-display');
-            if (marginInput) marginInput.value = costOverheadPercent;
+            const marginInp = document.getElementById('margin-input');
             if (marginDisp) marginDisp.textContent = `${costOverheadPercent}%`;
-            recalcFromPurchaseOrCost();
+            if (marginInp) marginInp.value = costOverheadPercent;
+
+            updateGeminiApiStatusUI();
             applyTabVisibility();
             updateCartBadge();
             updateHeaderStats();
+            recalcFromPurchaseOrCost();
             renderVitrine();
-            renderEstoque();
-            renderClientes();
+            renderCart();
             renderHistorico();
-            lucide.createIcons();
+            renderClientes();
+            renderEstoque();
             initMobileAppIconAndManifest();
+            lucide.createIcons();
         });
     </script>
 </body>
