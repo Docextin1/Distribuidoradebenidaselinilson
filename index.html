@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distribuidora de Bebidas do Elinilson</title>
+    <!-- Meta tags PWA / Tela Inicial do Celular (Android & iOS) -->
+    <meta name="theme-color" content="#073442">
+    <meta name="application-name" content="Elinilson Bebidas">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Elinilson Bebidas">
+    <link id="pwa-favicon" rel="icon" type="image/png">
+    <link id="pwa-apple-touch-icon" rel="apple-touch-icon">
+    <link id="pwa-manifest-link" rel="manifest">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter & Montserrat -->
@@ -404,7 +414,7 @@
                 <div class="flex-shrink-0 flex items-center justify-center lg:justify-start">
                     <div class="relative group cursor-pointer" onclick="switchTab('vitrine')" title="Voltar para Vitrine">
                         <div class="absolute inset-2 bg-amber-400/20 rounded-full blur-xl group-hover:bg-amber-400/30 transition"></div>
-                        <svg class="w-48 sm:w-56 md:w-60 h-auto drop-shadow-md relative z-10 transform group-hover:scale-[1.02] transition-transform duration-300" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="brand-logo-svg" class="w-48 sm:w-56 md:w-60 h-auto drop-shadow-md relative z-10 transform group-hover:scale-[1.02] transition-transform duration-300" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <pattern id="diamondPattern" width="24" height="24" patternUnits="userSpaceOnUse">
                                     <rect width="24" height="24" fill="#073442"/>
@@ -3684,15 +3694,122 @@
             });
         }
 
-        window.addEventListener('DOMContentLoaded', () => {
+        // =========================================================================
+        // PWA & ÍCONE DE TELA INICIAL NO CELULAR (GERADO A PARTIR DA LOGO OFICIAL)
+        // =========================================================================
+        function initMobileAppIconAndManifest() {
+            try {
+                const logoSvg = document.getElementById('brand-logo-svg');
+                if (!logoSvg) return;
+
+                // Clona a logo oficial vetorial garantindo dimensões explícitas para renderização em alta definição
+                const clonedSvg = logoSvg.cloneNode(true);
+                clonedSvg.setAttribute('width', '512');
+                clonedSvg.setAttribute('height', '410');
+                const svgString = new XMLSerializer().serializeToString(clonedSvg);
+                const svgDataUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
+
+                const img = new Image();
+                img.onload = () => {
+                    const renderIconPng = (size) => {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = size;
+                        canvas.height = size;
+                        const ctx = canvas.getContext('2d');
+
+                        // Fundo institucional com bordas suaves para encaixe perfeito no ícone do Android/iOS
+                        ctx.fillStyle = '#073442';
+                        ctx.fillRect(0, 0, size, size);
+
+                        // Brilho sutil central atrás do brasão
+                        const radial = ctx.createRadialGradient(
+                            size * 0.5, size * 0.45, size * 0.05,
+                            size * 0.5, size * 0.5, size * 0.55
+                        );
+                        radial.addColorStop(0, 'rgba(251, 191, 36, 0.22)');
+                        radial.addColorStop(1, 'rgba(7, 52, 66, 0)');
+                        ctx.fillStyle = radial;
+                        ctx.fillRect(0, 0, size, size);
+
+                        // Centraliza o brasão completo mantendo a proporção 400x320
+                        const padding = size * 0.06;
+                        const drawWidth = size - padding * 2;
+                        const drawHeight = drawWidth * (320 / 400);
+                        const offsetY = (size - drawHeight) / 2;
+                        ctx.drawImage(img, padding, offsetY, drawWidth, drawHeight);
+
+                        return canvas.toDataURL('image/png');
+                    };
+
+                    const icon192 = renderIconPng(192);
+                    const icon512 = renderIconPng(512);
+
+                    // Atualiza favicon e ícone de atalho do iPhone/iPad (Apple Touch Icon)
+                    const faviconEl = document.getElementById('pwa-favicon');
+                    const appleIconEl = document.getElementById('pwa-apple-touch-icon');
+                    if (faviconEl) faviconEl.href = icon192;
+                    if (appleIconEl) appleIconEl.href = icon512;
+
+                    // Cria e vincula o Web App Manifest dinâmico para liberar "Instalar aplicativo" no Android/Chrome
+                    const currentStartUrl = window.location.href.split('#')[0];
+                    const manifestObj = {
+                        name: "Distribuidora de Bebidas do Elinilson",
+                        short_name: "Elinilson Bebidas",
+                        description: "Sistema de Gestão, Vitrine e PDV - Distribuidora de Bebidas do Elinilson",
+                        start_url: currentStartUrl,
+                        scope: "./",
+                        display: "standalone",
+                        orientation: "any",
+                        background_color: "#073442",
+                        theme_color: "#073442",
+                        icons: [
+                            {
+                                src: icon192,
+                                sizes: "192x192",
+                                type: "image/png",
+                                purpose: "any maskable"
+                            },
+                            {
+                                src: icon512,
+                                sizes: "512x512",
+                                type: "image/png",
+                                purpose: "any maskable"
+                            }
+                        ]
+                    };
+
+                    const manifestBlob = new Blob([JSON.stringify(manifestObj)], { type: 'application/manifest+json' });
+                    const manifestUrl = URL.createObjectURL(manifestBlob);
+                    const manifestLinkEl = document.getElementById('pwa-manifest-link');
+                    if (manifestLinkEl) manifestLinkEl.href = manifestUrl;
+
+                    // Registra Service Worker leve (quando suportado em HTTPS/localhost) para habilitar prompt nativo de instalação
+                    if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+                        const swCode = `
+                            self.addEventListener('install', (e) => self.skipWaiting());
+                            self.addEventListener('activate', (e) => e.waitUntil(self.clients.claim()));
+                            self.addEventListener('fetch', (e) => {
+                                e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+                            });
+                        `;
+                        const swBlob = new Blob([swCode], { type: 'application/javascript' });
+                        const swUrl = URL.createObjectURL(swBlob);
+                        navigator.serviceWorker.register(swUrl).catch(() => {});
+                    }
+                };
+                img.src = svgDataUrl;
+            } catch (err) {
+                console.warn('Aviso ao configurar ícone mobile:', err);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
             loadSystemState();
-            lucide.createIcons();
-            const badge = document.getElementById('cost-percent-badge');
-            if (badge) badge.textContent = `+${costOverheadPercent}% Custo`;
+            const marginInput = document.getElementById('margin-input');
             const marginDisp = document.getElementById('current-margin-display');
+            if (marginInput) marginInput.value = costOverheadPercent;
             if (marginDisp) marginDisp.textContent = `${costOverheadPercent}%`;
-            const marginInp = document.getElementById('margin-input');
-            if (marginInp) marginInp.value = costOverheadPercent;
+            recalcFromPurchaseOrCost();
             applyTabVisibility();
             updateCartBadge();
             updateHeaderStats();
@@ -3700,7 +3817,8 @@
             renderEstoque();
             renderClientes();
             renderHistorico();
-            renderCart();
+            lucide.createIcons();
+            initMobileAppIconAndManifest();
         });
     </script>
 </body>
